@@ -1,6 +1,7 @@
 <template>
     <header class=" fixed inset-x-0  top-0 z-50 bg-white  " :class="props.classHeaderWhite">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
+        <HeaderContact/>
         <nav class="flex items-center justify-between h-24 lg:px-8" aria-label="Global">
             <!-- <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5 " @click="mobileMenuOpen = false">
@@ -25,45 +26,33 @@
             </div>
             <div class="hidden  lg:flex lg:justify-end lg:absolute right-12 justify-center items-center  lg:gap-x-4">
 
-                <NuxtLink @click="dirigiraInicio"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
+                <NuxtLink @click="goToInicio" to="/"
+                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
-                <NuxtLink @click="dirigiraServicios"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
+                <NuxtLink @click="goTo('#servicios')" to="/"
+                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    Nosotros
+                </NuxtLink>
+                <NuxtLink @click="goTo('#servicios')" to="/"
+                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Servicios
                 </NuxtLink>
-                <NuxtLink @click="dirigiraEspecializaciones"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
-                    Especializaciones
+                <NuxtLink @click="goTo('#especializaciones')" to="/"
+                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    Proyectos
                 </NuxtLink>
-                <NuxtLink @click="dirigiraProgramas"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
+                <NuxtLink @click="goTo('#programas')" to="/"
+                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Programas
                 </NuxtLink>
-                <NuxtLink @click="dirigiraArticulos"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
-                    Articulos
-                </NuxtLink>
-                <NuxtLink @click="dirigiraContactanos"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
-                    Contáctanos
-                </NuxtLink>
-                <!-- <NuxtLink to="/blog"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
-                    Blog trainig
-                </NuxtLink> -->
-                <!-- <NuxtLink to="/"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline hover:text-[20px] cursor-pointer ">
-                    Directorio
-                </NuxtLink> -->
-                <!-- <NuxtLink to="/"
-                    class="text-base lg:text-lg  font-normal leading-6 text-black hover:underline  cursor-pointer ">
-                    ESFITNES
-                </NuxtLink> -->
+   
+
                 <NuxtLink to="/blog">
                     <button type="button"
-                        class="rounded-md bg-verdegio px-0 lg:px-2 xl:px-4 py-2  text-base lg:text-sm xl:text-3xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro">BLOG</button>
+                        class="rounded-md bg-verdegio px-0 lg:px-2 xl:px-4 bg-red-500 py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        Contacto empresa
+                    </button>
                 </NuxtLink>
 
             </div>
