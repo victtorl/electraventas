@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
 
+
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -18,4 +19,5 @@ export default defineNuxtConfig({
   },
 
   modules:['@vueuse/nuxt', "@nuxt/ui","@pinia/nuxt","@vueuse/motion/nuxt",],
+  
 })

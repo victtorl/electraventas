@@ -4,7 +4,10 @@
                <!-- Hero section -->
       <div class="relative isolate overflow-hidden h-full xl:h-[100vh] bg-blackgio pt-16 lg:pt-0 flex justify-center">
         <!-- <h1 class="text-xl text-red-500">{{ mainbanner?mainbanner.slides[currentIn].pictureUrl:''}}</h1> -->
-        <img :src="`${mainbanner? mainbanner.slides[currentIn].pictureUrl:''}`" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50 zoom-img" />
+        <!-- <img :src="`${mainbanner? mainbanner.slides[currentIn].pictureUrl:''}`" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50 zoom-img" /> -->
+        <div class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50 zoom-img">
+        
+        </div>
         <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true">
           <div
@@ -65,6 +68,18 @@
                                 <p class="text-sm font-monse  xl:text-base  text-white font-bold">Audio</p>
                             </div> -->
             </div>
+
+
+
+            <div class="w-full h-[50vh] bg-red-500">
+            <video-background 
+              :src="gatobaila"
+              style="max-height: 400px; height: 100vh;"
+          >
+              <h1 style="color: white;">Hello welcome!</h1>
+            </video-background>
+           </div>
+
 
             <span class="flex flex-col md:flex-row">
               <div v-for="item in mainbanner
@@ -167,13 +182,14 @@
         </div>
       </div>
 
-      <div class="w-[100vw] h-[100vh] bg-orange-300">
+      <div class=" h-[100vh] bg-orange-300">
 asdsad
       </div>
     </div>
 </template>
 <script setup>
 const mainbanner=ref(false)
+import gatobaila from "~/assets/videos/gatobaila.mp4"
 
 
 </script>
