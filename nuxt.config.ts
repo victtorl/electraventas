@@ -18,6 +18,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules:['@vueuse/nuxt', "@nuxt/ui","@pinia/nuxt","@vueuse/motion/nuxt",],
+  modules:[
+    '@vueuse/nuxt',
+    "@nuxt/ui",
+    "@pinia/nuxt",
+    "@vueuse/motion/nuxt",
+    'vue3-carousel-nuxt',
+  ],
   
 })

@@ -35,6 +35,7 @@ export default {
         // lato:['Lato'],
         // mtcursive: ['MtCursiva'],
         poppins: ['Poppins'],
+        manrope: ['Manrope'],
       },
       colors:{
         primaryport:'#1A1A29',

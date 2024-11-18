@@ -1,12 +1,16 @@
 <template>
-    <header class="fixed   inset-x-0  top-0 z-50" :class="props.classHeaderBase">
+    
+    <header class="fixed   inset-x-0  top-0 z-50 font-manrope " :class="props.classHeaderBase">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact/>
-        <nav class="flex items-center justify-between p-6 h-24  lg:px-8" aria-label="Global">
+        <span class="flex w-full items-center justify-center">
+        <nav class="flex items-center justify-between p-6 h-24  px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
+            
+
             <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-16 lg:hidden xl:block xl:h-24 ml-0 lg:ml-6 xl:ml-6 " src="~/assets/imgs/esdeporte.png" alt="" />
+                    
+                    <img class=" lg:hidden xl:block xl:h-24 ml-0  " src="~/assets/imgs/tec_logo.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -18,7 +22,8 @@
                     <img src="~/assets/icons/menuOpen.svg" class="w-10 h-10" alt="" srcset="">
                 </button>
             </div>
-            <div class="hidden  lg:flex lg:justify-end lg:absolute right-12 justify-center items-center  lg:gap-x-4">
+
+            <div class="hidden bg lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4 ">
 
                 <NuxtLink @click="goToInicio" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
@@ -44,14 +49,17 @@
 
                 <NuxtLink to="/blog">
                     <button type="button"
-                        class="rounded-md bg-verdegio px-0 lg:px-2 xl:px-4 bg-red-500 py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        class="border-[1.5px] border-white hover:border-yellow-400 text-white px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Contacto empresa
                     </button>
                 </NuxtLink>
 
             </div>
 
+            
+
         </nav>
+        </span>
 
         <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
             <div class="fixed inset-0 z-50" />
@@ -60,7 +68,7 @@
                 <div class="flex items-center justify-between">
                     <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
                         <span class="sr-only">Your Company</span>
-                        <img class="w-36 h-16 " src="~/assets/imgs/esdeporte.png" alt="" />
+                        <img class="w-36 h-16 " src="~/assets/imgs/tec_logo.png" alt="" />
                     </NuxtLink>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
                         <span class="sr-only">Close menu</span>
@@ -98,7 +106,7 @@
            
                             <NuxtLink to="/blog" @click="mobileMenuOpen">
                                 <button type="button"
-                                    class="rounded-md bg-verdegio px-2 lg:px-2 xl:px-4 py-2  text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                                    class="border-[1px] border-yellow-400  px-2 lg:px-2 xl:px-4 py-2  text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                                     Contacto empresa
                                 </button>
                             </NuxtLink>

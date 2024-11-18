@@ -1,8 +1,9 @@
 <template>
-    <header class=" fixed inset-x-0  top-0 z-50 bg-white  " :class="props.classHeaderWhite">
+    <header class=" fixed inset-x-0  top-0 z-50 bg-white  font-manrope" :class="props.classHeaderWhite">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact/>
-        <nav class="flex items-center justify-between h-24 lg:px-8" aria-label="Global">
+        <span class="w-full flex justify-center items-center" >
+        <nav class="flex items-center justify-between h-24 px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
             <!-- <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5 " @click="mobileMenuOpen = false">
                     <span class="sr-only">Your Company</span>
@@ -12,7 +13,7 @@
             <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
                     <span class="sr-only">Your Company</span>
-                    <img class="h-16  lg:hidden xl:block xl:h-16  ml-0 lg:ml-6 xl:ml-10 " src="~/assets/imgs/ESDEPORTE2.png" alt="" />
+                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo_y.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -24,7 +25,7 @@
                     <img src="~/assets/icons/menuOpen.svg" class="w-10 h-10" alt="" srcset="">
                 </button>
             </div>
-            <div class="hidden  lg:flex lg:justify-end lg:absolute right-12 justify-center items-center  lg:gap-x-4">
+            <div class="hidden  lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4">
 
                 <NuxtLink @click="goToInicio" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
@@ -50,7 +51,7 @@
 
                 <NuxtLink to="/blog">
                     <button type="button"
-                        class="rounded-md bg-verdegio px-0 lg:px-2 xl:px-4 bg-red-500 py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        class="border-[1.5px] border-primary hover:border-yellow-400  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Contacto empresa
                     </button>
                 </NuxtLink>
@@ -58,7 +59,7 @@
             </div>
 
         </nav>
-
+        </span>
 
     </header>
 </template>
