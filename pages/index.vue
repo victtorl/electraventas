@@ -1,6 +1,6 @@
 
 <template>
-    <div class="bg-red-900">
+    <div class="">
 
                <!-- Hero section -->
       <div class="relative isolate overflow-hidden h-[100vh] bg-blackgio pt-16 lg:pt-0 flex justify-center">
@@ -81,6 +81,8 @@
       </div>
 
       <Propuesta/>
+      <OfertaBanner/>
+
       <QuienesSomos/>
       <Clientes/>
    

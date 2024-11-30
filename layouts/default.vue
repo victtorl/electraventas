@@ -2,9 +2,11 @@
   <div >
     <HeaderBase :classHeaderBase="claseheaderbase"></HeaderBase>
     <HeaderWhite :classHeaderWhite="claseheaderwhite" />
+    <div class="pt-[60px] lg:pt-0 xl:min-h-[calc(100vh-380px)] ">
       <ClientOnly>
         <slot/>
       </ClientOnly>
+    </div>
       <FooterBase />
   </div>
 </template>

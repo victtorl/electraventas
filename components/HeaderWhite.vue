@@ -31,28 +31,28 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
-                <NuxtLink @click="goTo('#servicios')" to="/"
+                <NuxtLink @click="goTo('#nosotros')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
-                <NuxtLink @click="goTo('#servicios')" to="/"
+                <NuxtLink @click="goTo('#productos')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
-                    Servicios
+                    Productos
                 </NuxtLink>
-                <NuxtLink @click="goTo('#especializaciones')" to="/"
+                <NuxtLink @click="goTo('#marcas')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
-                    Proyectos
+                    Marcas
                 </NuxtLink>
-                <NuxtLink @click="goTo('#programas')" to="/"
+                <NuxtLink @click="goTo('#ofertas')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
-                    Programas
+                    Oferta
                 </NuxtLink>
    
 
-                <NuxtLink to="/blog">
+                <NuxtLink to="/contacto"  target="_blank">
                     <button type="button"
                         class="border-[1.5px] border-primary hover:border-yellow-400  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                        Contacto empresa
+                        Contacto 
                     </button>
                 </NuxtLink>
 

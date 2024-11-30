@@ -10,6 +10,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@chenfengyuan/vue-countdown": "^2.1.2",
+    "@heroicons/vue": "^2.2.0",
     "@nuxt/ui": "^2.17.0",
     "@pinia/nuxt": "^0.5.1",
     "@vuelidate/core": "^2.0.3",
@@ -17,7 +19,9 @@
     "@vueuse/core": "^10.11.0",
     "@vueuse/motion": "^2.2.3",
     "@vueuse/nuxt": "^10.11.0",
+    "dayjs-nuxt": "^2.1.11",
     "nuxt": "^3.12.2",
+    "nuxt-swiper": "^2.0.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-responsive-video-background-player": "^2.3.1",

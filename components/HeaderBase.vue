@@ -9,8 +9,7 @@
 
             <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                    
-                    <img class=" lg:hidden xl:block xl:h-24 ml-0  " src="~/assets/imgs/tec_logo.png" alt="" />
+                    <img class="w-16 lg:w-36 lg:hidden xl:block xl:h-22 ml-0  " src="~/assets/imgs/tec_logo.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -29,28 +28,27 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
-                <NuxtLink @click="goTo('#servicios')" to="/"
+                <NuxtLink  to="/misionvision"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
-                <NuxtLink @click="goTo('#servicios')" to="/"
+                <NuxtLink @click="goTo('#productos')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
-                    Servicios
+                    Productos
                 </NuxtLink>
-                <NuxtLink @click="goTo('#especializaciones')" to="/"
+                <NuxtLink @click="goTo('#marcas')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
-                    Proyectos
+                    Marcas
                 </NuxtLink>
-                <NuxtLink @click="goTo('#programas')" to="/"
+                <NuxtLink @click="goTo('#ofertas')" to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
-                    Programas
+                    Ofertas
                 </NuxtLink>
    
-
-                <NuxtLink to="/blog">
+                <NuxtLink to="/contacto"  target="_blank"  >
                     <button type="button"
                         class="border-[1.5px] border-white hover:border-yellow-400 text-white px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                        Contacto empresa
+                     Contacto
                     </button>
                 </NuxtLink>
 
@@ -68,7 +66,7 @@
                 <div class="flex items-center justify-between">
                     <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
                         <span class="sr-only">Your Company</span>
-                        <img class="w-36 h-16 " src="~/assets/imgs/tec_logo.png" alt="" />
+                        <!-- <img class="w-16 h-16 " src="~/assets/imgs/tec_logo.png" alt="" /> -->
                     </NuxtLink>
                     <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
                         <span class="sr-only">Close menu</span>

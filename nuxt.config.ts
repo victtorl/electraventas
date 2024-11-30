@@ -24,6 +24,8 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@vueuse/motion/nuxt",
     'vue3-carousel-nuxt',
+    'nuxt-swiper',
+    "dayjs-nuxt"
   ],
   
 })
