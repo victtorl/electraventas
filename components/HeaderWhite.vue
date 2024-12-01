@@ -31,11 +31,11 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
-                <NuxtLink @click="goTo('#nosotros')" to="/"
+                <NuxtLink  to="/nosotros"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
-                <NuxtLink @click="goTo('#productos')" to="/"
+                <NuxtLink  to="/productos"
                     class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
                     Productos
                 </NuxtLink>

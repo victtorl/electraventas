@@ -28,11 +28,11 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
-                <NuxtLink  to="/misionvision"
+                <NuxtLink  to="/nosotros"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
-                <NuxtLink @click="goTo('#productos')" to="/"
+                <NuxtLink  to="/productos"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Productos
                 </NuxtLink>
