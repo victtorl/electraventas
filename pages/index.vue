@@ -4,7 +4,7 @@
 
                <!-- Hero section -->
       <div class="relative isolate overflow-hidden h-[100vh] bg-blackgio pt-16 lg:pt-0 flex justify-center">
-        <div class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50 zoom-img">
+        <div class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50  zoom-img">
           <video-background 
               :src="gatobaila"
               style="max-height:100%; height: 100%;"
@@ -26,8 +26,9 @@
           <div class="sm:mt-0 justify-center items-center pt-8 sm:pt-0 md:pt-8 ">
             <div class="text-left pb-4 xl:pb-8">
               <p  v-motion-slide-visible-left 
-                class="text-sm sm:text-base lg:text-2xl xl:text-4xl xl:leading-8 xl:max-w-3xl font-bold text-white ">
-                Ofrecemos soluciones innovadoras
+                class="text-sm sm:text-base lg:text-2xl xl:text-[40px] xl:leading-10 xl:max-w-3xl font-bold text-white ">
+                <!-- Ofrecemos soluciones innovadoras -->
+                Potencia, calidad y confianza: tus soluciones eléctricas al <span class="text-elecktraamarillo" >mejor precio garantizado.</span>
               </p>
             </div>
           </div>
@@ -35,16 +36,17 @@
           <div class="mx-auto  flex flex-col md:flex-row gap-y-4 xl:gap-x-4">
             <div class="  flex flex-col justify-center  ">
               <p class="font-monse font-bold text-base xl:text-lg text-white">
-                De la mano de nuestros colaboradore con expertis y profesionalismo
+                <!-- De la mano de nuestros colaboradore con expertis y profesionalismo -->
+                 Somos tu proveedor de confianza
               </p>
             </div>
           </div>
 
 
-          <NuxtLink to="/blog" >
+          <NuxtLink target="_blank" to="https://heyzine.com/flip-book/73f3a7acce.html" >
                     <button type="button"   
-                        class="border-[1.5px] translate-y-8 mt-6 text-white hover:border-yellow-400  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                        Ver todos los servicios
+                        class=" hover:bg-elecktranegro hover:text-white font-medium translate-y-8 mt-6 bg-elecktraamarillo text-main-black rounded-lg   px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        Revisa nuestro catálogo
                     </button>
           </NuxtLink>
 
@@ -84,6 +86,7 @@
       <OfertaBanner/>
 
       <QuienesSomos/>
+
       <Clientes/>
    
 
@@ -99,8 +102,9 @@ import gatobaila from "~/assets/videos/corporativo.mp4"
 
 
 <style>
-.videpreview{
-  
+.billoconfig{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(57,57,51,1) 90%);
 }
 
 </style>

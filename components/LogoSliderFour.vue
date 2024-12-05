@@ -1,5 +1,6 @@
 <template>
-        <section class="max-w-full overflow-hidden flex flex-col py-16 justify-center items-center bg-main-gray "  >
+
+      <section class="max-w-full overflow-hidden flex flex-col py-16 justify-center items-center bg-main-gray "  >
 
           <!-- <p class="w-full text-center text-lg lg:text-[29px] py-8  font-bold text-black">
             ¡La confianza de nuestros clientes es nuestra mayor garantía!
@@ -32,6 +33,7 @@
         </div>
       </div>
     </section>
+
 </template>
 
 <script setup lang="ts">

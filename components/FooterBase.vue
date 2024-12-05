@@ -3,10 +3,10 @@
 
 
 
-    <footer class="pt-20 bg-slate-800 ">
+    <footer class="pt-20 bg-elecktranegro ">
       <div class="flex flex-wrap justify-between gap-5 mx-auto mb-20 px-auto px-6 lg:px-16 w-full 3xl:w-maxdesk 3xl:px-0">
         <div class="w-fit max-w-[300px]">
-          <img src="~/assets/imgs/tec_logo.png" alt="logo"  class="w-36" />
+          <img src="~/assets/imgs/tec_logo_y.png" alt="logo"  class="w-36" />
           <p class="max-w-[300px] text-white/55 my-6">
             ¿Tienes dudas? ¡Estamos aquí para ayudarte! Contáctanos y recibe respuestas rápidas.
           </p>
@@ -266,18 +266,18 @@
             class="bg-transparent border border-white/10 py-2.5 px-6 rounded-[28px] focus:outline-none w-full mt-5 text-white"
           /> -->
           <NuxtLink to="/contacto">
-            <div class="home-two-btn-bg w-64  rounded-2xl py-3.5 group bg-it-blue border-it-blue  flex flex-row justify-center items-center bg-slate-500 mt-2.5 before:bg-it-black after:bg-it-black">
-              <span class="relative z-10 text-base font-semibold text-white transition-all duration-300 group-hover:text-it-blue font-inter">
-                Contactanos
+            <div class="home-two-btn-bg w-64  rounded-2xl py-3.5 group   flex flex-row justify-center items-center bg-elecktraamarillo hover:bg-white text-black mt-2.5 before:bg-it-black after:bg-it-black">
+              <span class="relative z-10 text-base font-semibold text-black transition-all duration-300 group-hover:text-elecktranegro font-inter">
+                Contáctanos
               </span>
             </div>
           </NuxtLink>
         </div>
       </div>
-      <div class="w-full h-[80px] md:h-[65px] bg-it-black">
+      <div class="w-full h-[80px] md:h-[65px] bg-elecktraamarillo">
         <div class="h-full mx-auto border-t theme-container border-white/10 px-6 lg:px-16 w-full 3xl:w-maxdesk 3xl:px-0">
           <div class="flex flex-wrap items-center justify-between w-full h-full">
-            <span class="text-white/50 max-w-80">
+            <span class="text-elecktranegro max-w-80">
               2024 © Todos los derechos reservados
               <!-- <b class="text-white">victtorl</b> -->
             </span>
@@ -299,7 +299,7 @@
                       cx="27.5"
                       cy="27.5"
                       r="26"
-                      fill="#5F57FF"
+                      fill="#000000"
                       stroke="#150D21"
                       strokeWidth="3"
                     />
@@ -315,11 +315,11 @@
               </a>
             </div>
             <ul class="flex items-center space-x-3 max-w-80 md:space-x-6  ">
-              <li class="font-medium hover:text-white hover:underline common-transition text-paragraph">
+              <li class="font-medium hover:text-white hover:underline common-transition text-elecktranegro">
                 <a href="#">Politica de privacidad</a>
               </li>
-              <li class="font-medium text-paragraph">|</li>
-              <li class="font-medium hover:text-white hover:underline common-transition text-paragraph">
+              <li class="font-medium text-elecktranegro">|</li>
+              <li class="font-medium hover:text-white hover:underline common-transition text-elecktranegro">
                 <a href="#">Terminos y C</a>
               </li>
             </ul>

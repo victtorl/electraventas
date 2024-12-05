@@ -892,7 +892,7 @@ h6 {
 .feature-item-h-4 .feature-item-wrapper {
   position: relative;
   transition: all 0.5s ease-in-out;
-  border: 1px solid #231b2f;
+  border: 1px solid #ffcc03;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -900,7 +900,7 @@ h6 {
   background: linear-gradient(
     180deg,
     rgba(121, 74, 255, 0) 0%,
-    rgba(121, 74, 255, 0.3) 100%
+    rgba(180, 177, 11, 0.655) 100%
   );
   content: "";
   display: block;

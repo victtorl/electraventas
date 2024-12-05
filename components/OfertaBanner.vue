@@ -1,47 +1,51 @@
 <template>
-    <div  class="w-full flex py-8 bg-yellow-600">
-        <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-row">
-
+    <div  class="w-full flex py-8 justify-center bg-elecktranegro text-elecktraamarillo">
+        <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col lg:flex-row text-center items-center">
+            <p v-motion-pop-visible class="text-3xl font-bold font-manrope w-full"  >Revisa nuestras ofertass</p>
+        </div>
+    </div>
+    <div  class="w-full flex py-8 justify-center bg-elecktranegro text-black">
+        <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col lg:flex-row  items-center">
             <!-- start oferta -->
-            <div>
-                <div class="w-28 h-28 bg-yellow-600" >
-                    <img src="/assets/landing-imgs/oferta/oferta.jpg" class="bg-yellow-600" alt="">
+            <div class="flex lg:flex-col items-center gap-x-4 my-4 lg:my-0  xl:w-64" >
+                <div class="" >
+                    <img src="/assets/landing-imgs/oferta/oferta.jpg" class=" w-32 h-32" alt="">
                 </div>
                 <div>
-                    <p class="font-bold text-[24px] text-white" >Termina en</p>
+                    <p class="font-bold text-[24px] text-white py-4" >Termina en</p>
                     <div>
                     <ClientOnly>
                         <vue-countdown :time="diferenciaMilisegundosDesdeHoy(realmana)" v-slot="{ days, hours, minutes, seconds }">
                           
-                            <div class="flex flex-row gap-x-3 text-[#D9D9D9] ">
-                                <div class="flex flex-col items-center">
+                            <div class="flex flex-row gap-x-3 text-[#D9D9D9]  ">
+                                <div class="flex flex-col items-center text-black bg-white rounded-lg px-2">
                                     <div class="text-xl sm:text-2xl font-bold relative ">
                                         <p class="">{{ days }}</p>
-                                        <p class=" absolute text-4xl -top-4 -right-3 ">.</p>
+                                        <!-- <p class=" absolute text-4xl -top-4 -right-3 "></p> -->
                                     </div>
                                     <div class="text-xs sm:text-sm">
                                         dias
                                     </div>
                                 </div>
-                                <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center text-black bg-white rounded-lg px-2">
                                     <div class="text-xl sm:text-2xl font-bold relative ">
                                         <p class="">{{ hours }}</p>
-                                        <p class=" absolute text-4xl -top-4 -right-3 ">.</p>
+                                        <!-- <p class=" absolute text-4xl -top-4 -right-3 "></p> -->
                                     </div>
                                     <div class="text-xs sm:text-sm">
                                         horas
                                     </div>
                                 </div>
-                                <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center text-black bg-white rounded-lg px-2">
                                     <div class="text-xl sm:text-2xl font-bold relative ">
                                         <p class="">{{ minutes }}</p>
-                                        <p class=" absolute text-4xl -top-4 -right-3 ">.</p>
+                                        <!-- <p class=" absolute text-4xl -top-4 -right-3 "></p> -->
                                     </div>
                                     <div class="text-xs sm:text-sm">
                                         mins
                                     </div>
                                 </div>
-                                <div class="flex flex-col items-center">
+                                <div class="flex flex-col items-center text-black bg-white rounded-lg px-2">
                                     <div class="text-xl sm:text-2xl font-bold relative ">
                                         <p class="">{{ seconds }}</p>
                                         <!-- <p class=" absolute text-4xl -top-4 -right-3 ">.</p> -->
@@ -58,37 +62,13 @@
             </div>
             <!-- end oferta -->
 
-              <!-- start group card -->
-            <div class=" w-full  grid grid-cols-1 lg:grid-cols-2" >
-                <div v-for="item in 2" class="max-w-md mx-auto rounded-md overflow-hidden flex flex-row shadow-md hover:shadow-lg">
-                    <div class="relative">
-                        <img class="w-64 h-full" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Product Image">
-                        <div class="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">SALE
-                        </div>
-                    </div>
-                    <div class="p-4 w-full bg-red-500 text-white">
-                        <h3 class="text-lg font-medium mb-2">Product Title</h3>
-                        <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vitae ante
-                            vel eros fermentum faucibus sit amet euismod lorem.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="font-bold text-3xl">$19.99</span>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                        Ver producto
-                        {{ mañana }}
-                    </button>
-                        </div>
-                    </div>
-                </div>
 
-                
+  
 
-      
-
-                </div>
+            <OfertaSlider/>
+                <!-- end group card -->
             </div>
-              <!-- end group card -->
        
-
 
     </div>
 
@@ -114,3 +94,12 @@ function diferenciaMilisegundosDesdeHoy(fecha) {
 }
 
 </script>
+
+
+<style>
+.gradienteoferta{
+    background: rgb(248,1,0);
+background: linear-gradient(90deg, rgba(248,1,0,1) 38%, rgba(188,9,0,1) 86%);
+}
+
+</style>

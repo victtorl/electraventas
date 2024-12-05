@@ -4,12 +4,12 @@
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact/>
         <span class="flex w-full items-center justify-center">
-        <nav class="flex items-center justify-between p-6 h-24  px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
+        <nav class="flex items-center justify-between p-6 h-24 bg-elecktranegro px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
             
 
-            <div class="flex lg:flex-1" @click="goToInicio">
+            <div class="flex lg:flex items-center " @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                    <img class="w-16 lg:w-36 lg:hidden xl:block xl:h-22 ml-0  " src="~/assets/imgs/tec_logo.png" alt="" />
+                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo2.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -40,14 +40,14 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Marcas
                 </NuxtLink>
-                <NuxtLink @click="goTo('#ofertas')" to="/"
+                <NuxtLink @click="goTo('#ofertas')" to="/ofertas"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Ofertas
                 </NuxtLink>
    
                 <NuxtLink to="/contacto"  target="_blank"  >
                     <button type="button"
-                        class="border-[1.5px] border-white hover:border-yellow-400 text-white px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        class="border-[1.5px] border-white rounded-md hover:bg-white hover:text-black text-white px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                      Contacto
                     </button>
                 </NuxtLink>
@@ -104,7 +104,7 @@
            
                             <NuxtLink to="/blog" @click="mobileMenuOpen">
                                 <button type="button"
-                                    class="border-[1px] border-yellow-400  px-2 lg:px-2 xl:px-4 py-2  text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                                    class="border-[1px]   px-2 lg:px-2 xl:px-4 py-2  text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                                     Contacto empresa
                                 </button>
                             </NuxtLink>

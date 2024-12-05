@@ -1,5 +1,5 @@
 <template>
-    <header class=" fixed inset-x-0  top-0 z-50 bg-white  font-manrope" :class="props.classHeaderWhite">
+    <header class=" fixed inset-x-0  top-0 z-50 bg-elecktranegro  font-manrope" :class="props.classHeaderWhite">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact/>
         <span class="w-full flex justify-center items-center" >
@@ -12,8 +12,7 @@
             </div> -->
             <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                    <span class="sr-only">Your Company</span>
-                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo_y.png" alt="" />
+                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo2.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -28,30 +27,30 @@
             <div class="hidden  lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4">
 
                 <NuxtLink @click="goToInicio" to="/"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
                 <NuxtLink  to="/nosotros"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
                 <NuxtLink  to="/productos"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Productos
                 </NuxtLink>
                 <NuxtLink @click="goTo('#marcas')" to="/"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Marcas
                 </NuxtLink>
                 <NuxtLink @click="goTo('#ofertas')" to="/"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-black hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Oferta
                 </NuxtLink>
    
 
                 <NuxtLink to="/contacto"  target="_blank">
                     <button type="button"
-                        class="border-[1.5px] border-primary hover:border-yellow-400  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        class="border-[1.5px] rounded-lg border-primary bg-elecktranegro text-white hover:bg-elecktraamarillo hover:text-elecktranegro  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Contacto 
                     </button>
                 </NuxtLink>

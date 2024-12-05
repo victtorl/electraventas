@@ -50,14 +50,8 @@
           <div class="sm:col-span-2">
             <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Teléfono</label>
             <div class="relative mt-2.5">
-              <div class="absolute inset-y-0 left-0 flex items-center">
-                <label for="country" class="sr-only">Country</label>
-                <select id="country" name="country" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-                  <option>PE</option>
-                </select>
-                <ChevronDownIcon class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" aria-hidden="true" />
-              </div>
-              <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6" />
+      
+              <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6" />
             </div>
           </div>
           <div class="sm:col-span-2">
@@ -68,7 +62,7 @@
           </div>
           <SwitchGroup as="div" class="flex gap-x-4 sm:col-span-2">
             <div class="flex h-6 items-center">
-              <Switch v-model="agreed" :class="[agreed ? 'bg-indigo-600' : 'bg-gray-200', 'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">
+              <Switch v-model="agreed" :class="[agreed ? 'bg-main-black' : 'bg-gray-200', 'flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600']">
                 <span class="sr-only">Agree to policies</span>
                 <span aria-hidden="true" :class="[agreed ? 'translate-x-3.5' : 'translate-x-0', 'size-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out']" />
               </Switch>
@@ -76,12 +70,12 @@
             <SwitchLabel class="text-sm/6 text-gray-600">
               Acepto terminos y condiciones y
               {{ ' ' }}
-              <a href="#" class="font-semibold text-indigo-600">privaciadad &nbsp;politicas</a>.
+              <a href="#" class="font-semibold text-main-black">privaciadad &nbsp;politicas</a>.
             </SwitchLabel>
           </SwitchGroup>
         </div>
         <div class="mt-10">
-          <button type="submit" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
+          <button type="submit" class="block w-full rounded-md bg-main-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Enviar</button>
         </div>
       </form>
     </div>

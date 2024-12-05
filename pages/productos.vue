@@ -1,8 +1,9 @@
 <template>
-    <div class="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16  ">
+    <div class=" p-5 sm:p-10 md:p-16 bg-elecktranegro/30  ">
+        
 
 <div class="border-b mb-5 flex justify-between text-sm pt-36 ">
-    <div class="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
+    <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase">
         <svg class="h-6 mr-3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.005 455.005"
             style="enable-background:new 0 0 455.005 455.005;" xml:space="preserve">
@@ -16,58 +17,67 @@
                 <path d="M53.527,192.864c-2.187,3.518-1.109,8.142,2.409,10.329l183.478,114.081c1.232,0.767,2.601,1.132,3.953,1.132 c2.506,0,4.956-1.256,6.376-3.541c2.187-3.518,1.109-8.142-2.409-10.329L63.856,190.455 C60.338,188.266,55.714,189.346,53.527,192.864z"> </path>
             </g>
         </svg>
-        <a href="#" class="font-semibold inline-block">Cooking BLog</a>
+        <a href="#" class="font-semibold inline-block">Lista de productos</a>
     </div>
-    <a href="#">See All</a>
+    <!-- <a href="#">See All</a> -->
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10">
 
 
-
-    
     <!-- CARD 3 -->
-    <div  v-for="item in 16" class="rounded overflow-hidden shadow-lg flex flex-col">
-        <a href="#"></a>
+    <div  v-for="item in 16" class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
+        <a  class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">{{ marca }}</a>
         <div class="relative"><a href="#">
-                <img class="w-full"
+                <img class="w-full p-6 z-100"
                     src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                    alt="Sunset in the mountains">
+                    alt="">
+                <!-- <div
+                    class="hover:bg-transparent transition duration-300 absolute z-10 bottom-0 top-0 right-0 left-0 bg-elecktranegro opacity-25">
+                </div> -->
+            </a>
+            <!-- <a href="#!">
                 <div
-                    class="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
-                </div>
-            </a><a href="#!">
-                <div
-                    class="text-xs absolute top-0 right-0 bg-indigo-600 px-4 py-2 text-white mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+                    class="text-xs absolute rounded-lg top-0 right-0 bg-elecktraamarillo px-4 py-2 text-elecktranegro font-semibold mt-3 mr-3 hover:bg-white hover:text-black transition duration-500 ease-in-out">
                     Ver producto
                 </div>
-            </a>
+            </a> -->
         </div>
         <div class="px-6 py-4 mb-auto">
             <a href="#"
-                class="font-medium text-lg inline-block hover:text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
+                class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 ease-in-out inline-block mb-2">
                {{ nombreprod }}
             </a>
-            <p class="text-gray-500 text-sm">
-                {{ descriptionprod }}
+
+            <p class="text-gray-500 text-sm text-center">
+               <span class="text-md font-bold " >Cod</span> {{ codigo }}
+            </p>
+            <p class="text-gray-500 text-sm text-center">
+               <span class="text-md font-bold " >Unid</span> {{ tipoUnidad }}
             </p>
         </div>
         <div class="px-6 py-3 flex flex-row items-center justify-between  bg-gray-100">
-            <span href="#" class="py-1 text-xs font-regular text-gray-900 mr-1 flex flex-row items-center">
-                <div class="w-5 h-5" >
-                    <svg fill="#000000" viewBox="-1 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M16.417 9.58A7.917 7.917 0 1 1 8.5 1.662a7.917 7.917 0 0 1 7.917 7.916zm-2.93.717L8.981 5.793A2.169 2.169 0 0 0 7.63 5.24l-2.635.026a.815.815 0 0 0-.801.8L4.163 8.71a2.166 2.166 0 0 0 .55 1.352l4.505 4.504a.794.794 0 0 0 1.12 0l3.148-3.15a.794.794 0 0 0 0-1.119zM5.724 6.25a.554.554 0 1 0 .554.554.554.554 0 0 0-.554-.554zm5.306 5.857a.396.396 0 0 1-.56 0l-.246-.246a1.853 1.853 0 0 1-.328.172 1.17 1.17 0 0 1-.465.091c-.034 0-.068 0-.103-.003a.396.396 0 0 1 .057-.79.428.428 0 0 0 .199-.025 1.125 1.125 0 0 0 .198-.102 1.683 1.683 0 0 0 .181-.142 1.004 1.004 0 0 0 .267-.47c.042-.199-.025-.266-.057-.298a.294.294 0 0 0-.186-.083.654.654 0 0 0-.221.024.875.875 0 0 0-.206.097.995.995 0 0 0-.164.134 2.094 2.094 0 0 1-.267.228 1.606 1.606 0 0 1-.422.216 1.305 1.305 0 0 1-.546.06 1.103 1.103 0 0 1-.669-.31 1.118 1.118 0 0 1-.275-1.063 1.688 1.688 0 0 1 .221-.522l-.24-.24a.396.396 0 1 1 .559-.56l.249.248a1.937 1.937 0 0 1 .343-.167 1.388 1.388 0 0 1 .485-.09.396.396 0 0 1 .001.792.595.595 0 0 0-.206.039 1.141 1.141 0 0 0-.208.1l-.02.012a1.122 1.122 0 0 0-.148.106 1.01 1.01 0 0 0-.264.457.334.334 0 0 0 .063.328.326.326 0 0 0 .19.082.528.528 0 0 0 .215-.023.837.837 0 0 0 .211-.109 1.324 1.324 0 0 0 .168-.144 1.793 1.793 0 0 1 .296-.24 1.679 1.679 0 0 1 .399-.187 1.454 1.454 0 0 1 .51-.058 1.082 1.082 0 0 1 .692.314 1.058 1.058 0 0 1 .27 1.022 1.703 1.703 0 0 1-.223.54l.25.251a.395.395 0 0 1 0 .56z"></path></g></svg>
-                </div>
-                <span class="ml-1"> S/.300</span>
-            </span>
+            <button href="#" class="py-1 text-xs w-20 font-regular bg-white border-[1.5px] hover:bg-elektraplomo/50 border-black/30 px-2 rounded-md text-gray-900 mr-1 flex flex-row items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.25 2.25C1.83579 2.25 1.5 2.58579 1.5 3C1.5 3.41421 1.83579 3.75 2.25 3.75H3.63568C3.80558 3.75 3.95425 3.86422 3.99803 4.02838L6.55576 13.6199C4.94178 14.0385 3.75 15.5051 3.75 17.25C3.75 17.6642 4.08579 18 4.5 18H20.25C20.6642 18 21 17.6642 21 17.25C21 16.8358 20.6642 16.5 20.25 16.5H5.37803C5.68691 15.6261 6.52034 15 7.5 15H18.7183C19.0051 15 19.2668 14.8364 19.3925 14.5785C20.5277 12.249 21.5183 9.83603 22.3527 7.35126C22.4191 7.15357 22.4002 6.93716 22.3005 6.75399C22.2008 6.57082 22.0294 6.43743 21.8273 6.38583C17.0055 5.15442 11.9536 4.5 6.75 4.5C6.39217 4.5 6.03505 4.5031 5.67868 4.50926L5.44738 3.64188C5.2285 2.82109 4.48515 2.25 3.63568 2.25H2.25Z" fill="#0F172A"/>
+                <path d="M3.75 20.25C3.75 19.4216 4.42157 18.75 5.25 18.75C6.07843 18.75 6.75 19.4216 6.75 20.25C6.75 21.0784 6.07843 21.75 5.25 21.75C4.42157 21.75 3.75 21.0784 3.75 20.25Z" fill="#0F172A"/>
+                <path d="M16.5 20.25C16.5 19.4216 17.1716 18.75 18 18.75C18.8284 18.75 19.5 19.4216 19.5 20.25C19.5 21.0784 18.8284 21.75 18 21.75C17.1716 21.75 16.5 21.0784 16.5 20.25Z" fill="#0F172A"/>
+                </svg>
 
-            <span href="#" class="py-1 text-xs font-regular  text-gray-900 mr-1 flex flex-row items-center ">
-                <div class="w-4 h -4" >
-                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99999 1H15V3H6.99999V1Z" fill="#000000"></path> <path d="M6.99999 5H15V7H6.99999V5Z" fill="#000000"></path> <path d="M15 9H6.99999V11H15V9Z" fill="#000000"></path> <path d="M6.99999 13H15V15H6.99999V13Z" fill="#000000"></path> <path d="M3.28854 10.75H0.999993V9H3.28854C4.30279 9 5.12499 9.82221 5.12499 10.8364C5.12499 11.3407 4.91763 11.8228 4.55155 12.1696L3.41116 13.25H4.99999V15H0.999993V13.1236L3.348 10.8992C3.36523 10.8829 3.37499 10.8602 3.37499 10.8364C3.37499 10.7887 3.33629 10.75 3.28854 10.75Z" fill="#000000"></path> <path d="M2.358 1.125L0.723297 1.6699L1.2767 3.3301L2.125 3.04733V7H3.875V1.125H2.358Z" fill="#000000"></path> </g></svg>
-                </div>
-               
-                <span class="ml-1">X unid</span>
-            </span>
+                <p class="ml-1" >Cotizar</p>
+            
+            </button>
+
+            <button href="#" class="py-1.5 text-xs w-20 font-regular bg-white border-[1.5px] hover:bg-elektraplomo/50 border-black/30 px-2 rounded-md text-gray-900 mr-1 flex flex-row justify-center items-center">
+                <svg width="20" height="20" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.7616C6.77208 3.7616 3.75 6.78367 3.75 10.5116C3.75 14.2395 6.77208 17.2616 10.5 17.2616C12.3642 17.2616 14.0506 16.5069 15.273 15.2846C16.4953 14.0622 17.25 12.3758 17.25 10.5116C17.25 6.78367 14.2279 3.7616 10.5 3.7616ZM2.25 10.5116C2.25 5.95525 5.94365 2.2616 10.5 2.2616C15.0563 2.2616 18.75 5.95525 18.75 10.5116C18.75 12.5194 18.032 14.3607 16.8399 15.7909L21.5303 20.4813C21.8232 20.7742 21.8232 21.249 21.5303 21.5419C21.2374 21.8348 20.7626 21.8348 20.4697 21.5419L15.7793 16.8515C14.3491 18.0436 12.5078 18.7616 10.5 18.7616C5.94365 18.7616 2.25 15.0679 2.25 10.5116Z" fill="#0F172A"/>
+                </svg>
+
+
+                <p class="ml-1 text-md font-bold" >Ver</p>
+            
+            </button>
         </div>
     </div>
 
@@ -77,7 +87,8 @@
 </template>
 
 <script setup>
-
-const nombreprod=ref('Gasolina de 36 octanos ')
-const descriptionprod=ref('Gasolina de 36 octanos este producto viene a ase lo mejor en calidad de gasoinaslk')
+const nombreprod=ref('Espiral envolvente de 16mm en color negro ')
+const marca=ref('Holrex')
+const codigo=ref('1234654as')
+const tipoUnidad=ref('X unid ')
 </script>
