@@ -1,9 +1,9 @@
 <template>
-    <div class=" p-5 sm:p-10 md:p-16 min-h-[50vh] bg-elecktranegro/30  ">
+    <div class=" p-5 sm:p-10 md:p-16  bg-elecktranegro/30  ">
         
 
-<div class="border-b mb-5 flex justify-between text-sm pt-28 ">
-    <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase">
+<div class="border-b mb-5 flex justify-between text-sm pt-36  ">
+    <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase ">
         <svg class="h-6 mr-3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.005 455.005"
             style="enable-background:new 0 0 455.005 455.005;" xml:space="preserve">
@@ -17,17 +17,18 @@
                 <path d="M53.527,192.864c-2.187,3.518-1.109,8.142,2.409,10.329l183.478,114.081c1.232,0.767,2.601,1.132,3.953,1.132 c2.506,0,4.956-1.256,6.376-3.541c2.187-3.518,1.109-8.142-2.409-10.329L63.856,190.455 C60.338,188.266,55.714,189.346,53.527,192.864z"> </path>
             </g>
         </svg>
-        <a href="#" class="font-semibold inline-block">Lista de productos</a>
+        <a v-if="prodST.prodsFilter[0]" href="#" class="font-semibold inline-block">Lista de productos en la marca :{{ prodST.prodsFilter[0]?prodST.prodsFilter[0].data.marca:'' }}</a>
+        <a v-else href="#" class="font-semibold inline-block">No existen productos en esta marca</a>
     </div>
     <!-- <a href="#">See All</a> -->
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10">
+<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 pb-64  gap-10">
 
 
     <!-- CARD 3 -->
-    <div  v-for="item in proST.groupProducts" class="rounded overflow-hidden shadow-lg bg-white flex flex-col  ">
+    <div  v-for="item in prodST.prodsFilter" class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
         <a  class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 pb-1 ease-in-out inline-block">
                     {{ item.data.marca }}
                 </a>
@@ -90,10 +91,8 @@
 
 <script setup>
 import { getAllProducts } from '~/firebase';
-const nombreprod=ref('Espiral envolvente de 16mm en color negro ')
-const marca=ref('Holrex')
-const codigo=ref('1234654as')
-const tipoUnidad=ref('X unid ')
+
+const prodST=useProductStore()
 
 const proST=useProductStore()
   ///LLENAR LOS PRODUCTOS AL MONTAR EL COMPONENTE

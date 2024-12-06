@@ -40,7 +40,7 @@ function selectStyleOnLoad() {
     if (routeST.routeparam == "index") {
       claseheaderbase.value = "bg-transparent";
     } else {
-      //si la ruta es diferente index sea blog o slug-blog
+      //si la ruta es diferente index sea 
       claseheaderbase.value = "bg-black";
     }
   } else {

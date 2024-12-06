@@ -53,7 +53,7 @@
         <h1 class="px-5 bg-elecktraamarillo border-blue-sass/20 text-elecktranegro font-medium rounded-[30px] w-fit mx-auto">
           Nuestos valores fundamentales
         </h1>
-        <h2 class="sm:text-48 text-24 font-semibold text-main-black mb-[32px] mt-[18px] w-full max-w-[795px] text-center mx-auto">
+        <h2 class="sm:text-32 text-24 font-semibold text-main-black mb-[32px] mt-[18px] w-full max-w-[795px] text-center mx-auto">
           En cada acción y decisión, enfocamos compromiso e integridad.
         </h2>
         <div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 min-h-[303px] gap-[30px] mt-6 sm:mt-[70px]">

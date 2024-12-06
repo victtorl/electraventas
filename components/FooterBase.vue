@@ -108,7 +108,7 @@
               <h1 class="font-semibold text-white text-18">Services</h1>
               <ul class="mt-3.5">
                 <li class="">
-                  <NuxtLink to="/project-details">
+                  <NuxtLink to="/">
                     <div class="relative flex items-center gap-2 pr-5 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"
@@ -133,7 +133,7 @@
                   </NuxtLink>
                 </li>
                 <li class="">
-                  <NuxtLink to="/project-details">
+                  <NuxtLink to="/">
                     <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"
@@ -158,7 +158,7 @@
                   </NuxtLink>
                 </li>
                 <li class="">
-                  <NuxtLink to="/project-details">
+                  <NuxtLink to="/">
                     <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"
@@ -183,7 +183,7 @@
                   </NuxtLink>
                 </li>
                 <li class="">
-                  <NuxtLink to="/project-details">
+                  <NuxtLink to="/">
                     <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"
@@ -208,7 +208,7 @@
                   </NuxtLink>
                 </li>
                 <li class="">
-                  <NuxtLink to="/project-details">
+                  <NuxtLink to="/">
                     <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"

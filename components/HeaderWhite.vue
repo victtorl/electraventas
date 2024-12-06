@@ -38,15 +38,14 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Productos
                 </NuxtLink>
-                <NuxtLink @click="goTo('#marcas')" to="/"
+                <NuxtLink  to="/marcas"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Marcas
                 </NuxtLink>
-                <NuxtLink @click="goTo('#ofertas')" to="/"
+                <NuxtLink  to="/ofertas"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                     Oferta
                 </NuxtLink>
-   
 
                 <NuxtLink to="/contacto"  target="_blank">
                     <button type="button"
@@ -101,20 +100,8 @@ function dirigiraArticulos() {
     goTo('#articulos')
 }
 
-const navigation = [
-    { name: 'Especializaciones', href: '/' },
-    { name: 'Articulos', href: '/blog/123' },
-    { name: 'Blog trainig', href: '/blog' },
-    { name: 'Directorio', href: '/' },
-    { name: 'ESFITNES', href: '/' },
-]
 
-const getSignals = async () => {
-    const { data, error } = await useNuxtApp().$apiClient.getWebPage();
-    console.log(data);
-    console.log('hola');
 
-}
 
 
 

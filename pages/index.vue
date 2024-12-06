@@ -12,13 +12,13 @@
             </video-background>
         </div>
        
-        <div class="px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 absolute bottom-[30%]  3xl:bg-invisible">
+        <div class="px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 absolute bottom-[25%]  3xl:bg-invisible">
 
-          <div class="sm:mt-0 justify-center items-center  " >
+          <div class="sm:mt-0   justify-center items-center  " >
             <div class="text-left ">
               <p 
-                class="text-sm sm:text-base lg:text-2xl xl:text-2xl xl:leading-8 xl:max-w-2xl font-medium text-white ">
-                Que hacemos?
+                class="text-sm  sm:text-base lg:text-2xl xl:text-2xl xl:leading-8 xl:max-w-2xl font-medium text-white ">
+                Que hacemos? 
               </p>
             </div>
           </div>

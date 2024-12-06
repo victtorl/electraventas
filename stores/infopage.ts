@@ -90,8 +90,37 @@ export const useProductStore=defineStore("products-store",() => {
   }
 
 
+  const prodsFilter = ref<IProduct[]>(loadFiltersFromLocalStorage());
+
+  function llenarprodsFilter(itm:IProduct){
+    prodsFilter.value = prodsFilter.value.concat(itm)
+    saveFiltersToLocalStorage()
+  }
+  function limpiarprodsFilter(){
+    prodsFilter.value=[]
+    saveFiltersToLocalStorage()
+  }
+
+  // Función para cargar productos filtrados desde localStorage
+  function loadFiltersFromLocalStorage(): IProduct[] {
+    const storedProdsF = localStorage.getItem('prods-filter-elektra');
+    return storedProdsF ? JSON.parse(storedProdsF) : [];
+  }
+  // Función para sincronizar productos filtrados en localStorage
+  function saveFiltersToLocalStorage() {
+    localStorage.setItem('prods-filter-elektra', JSON.stringify(prodsFilter.value));
+  }
 
 
+  function filterOfertxMarca(name:any){
+    limpiarprodsFilter()
+    groupProducts.value.map(u=>{
+      if(u.data.marca==name){
+        llenarprodsFilter(u)
+      }
+    })
+    
+  }
 
 
   return {
@@ -109,7 +138,13 @@ export const useProductStore=defineStore("products-store",() => {
 
         groupOfertas,
         llenarOfertas,
-        limpiarOfertas
+        limpiarOfertas,
+
+        prodsFilter,
+        llenarprodsFilter,
+        limpiarprodsFilter,
+
+        filterOfertxMarca,
 
 
   }
