@@ -12,7 +12,7 @@
               >
 
 
-              <div  class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
+              <div  class="rounded overflow-hidden w-56 shadow-lg bg-white flex flex-col ">
         <a  class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">
           {{ slide.data.marca }}
         </a>
@@ -142,7 +142,7 @@ const swiper = useSwiper(containerRef,{
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 3.5,
+      slidesPerView: 3,
       spaceBetween: 50,
     },
   },
