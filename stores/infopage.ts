@@ -79,6 +79,17 @@ export const useProductStore=defineStore("products-store",() => {
 
 
 
+  const groupOfertas = ref([] as Array<{}|any|IProduct>);
+
+  function llenarOfertas(itm:IProduct){
+      groupOfertas.value = groupOfertas.value.concat(itm)
+  }
+
+  function limpiarOfertas(){
+      groupOfertas.value=[]
+  }
+
+
 
 
 
@@ -95,6 +106,10 @@ export const useProductStore=defineStore("products-store",() => {
         groupProducts,
         llenarProductos,
         limpiarProductos,
+
+        groupOfertas,
+        llenarOfertas,
+        limpiarOfertas
 
 
   }

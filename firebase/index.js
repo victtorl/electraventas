@@ -67,13 +67,16 @@ export const listarArchivos = async(name) => {
 
 
 
-//TRAER TODA LA LISTA DE PRODUCTOS
+//TRAER TODA LA LISTA DE PRODUCTOS 
 export const getAllProducts = async () => {
     const prodST = useProductStore()
     prodST.limpiarProductos()//limpia previa
+    prodST.limpiarOfertas()//limpia previa
     const querySnapshot = await getDocs(collection(db, "elektra-web"));
     querySnapshot.forEach((doc) => {
         prodST.llenarProductos({ id: doc.id, data: doc.data() })
+        // console.log(doc.data().oferta);
+        doc.data().oferta?prodST.llenarOfertas({ id: doc.id, data: doc.data() }):0
     });
 
     return prodST.groupProducts

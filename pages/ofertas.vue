@@ -26,12 +26,13 @@
 
 
     <!-- CARD 3 -->
-    <div  v-for="item in 16" class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
-        <a  class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">{{ marca }}</a>
+    <div  v-for="item in proST.groupOfertas" class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
+        <a  class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">
+            {{ item.data.marca }}</a>
         <div class="relative"><a href="#">
-                <img class="w-full p-6 z-100"
-                    src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                    alt="">
+            <img class="w-full h-52 bg-elecktraamarillo  p-6 z-100"
+                            :src="item.data.imagenes[0]"
+                            alt="">
                 <!-- <div
                     class="hover:bg-transparent transition duration-300 absolute z-10 bottom-0 top-0 right-0 left-0 bg-elecktranegro opacity-25">
                 </div> -->
@@ -45,15 +46,15 @@
         </div>
         <div class="px-6 py-4 mb-auto">
             <a href="#"
-                class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 ease-in-out inline-block mb-2">
-               {{ nombreprod }}
+                class="font-medium text-lg w-full leading-5 text-center hover:text-black transition duration-500 ease-in-out inline-block mb-2">
+               {{ item.data.nombre }}
             </a>
 
             <p class="text-gray-500 text-sm text-center">
-               <span class="text-md font-bold " >Cod</span> {{ codigo }}
+               <span class="text-md font-bold " >Cod</span> {{ item.data.codigo }}
             </p>
             <p class="text-gray-500 text-sm text-center">
-               <span class="text-md font-bold " >Unid</span> {{ tipoUnidad }}
+               <span class="text-md font-bold " >Unid</span> {{ item.data.medida }}
             </p>
         </div>
         <div class="px-6 py-3 flex flex-row items-center justify-between  bg-gray-100">
@@ -86,9 +87,14 @@
 </template>
 
 <script setup>
+import { getAllProducts } from '~/firebase';
 
-const nombreprod=ref('Espiral envolvente de 16mm en color negro ')
-const marca=ref('Holrex')
-const codigo=ref('1234654as')
-const tipoUnidad=ref('X unid ')
+const proST=useProductStore()
+  ///LLENAR LOS OFERTAS AL MONTAR EL COMPONENTE
+  onMounted(() => {
+    getAllProducts()
+  })
+
+
+
 </script>
