@@ -19,9 +19,10 @@
               :popper="{ placement: 'bottom-start' }"
               :ui="{ width: 'w-full md:w-[36rem]', rounded: 'rounded-none',item:{rounded:'rounded-none',active:'bg-white'} }">
               <div class="w-full relative flex items-center" @click="gestionApertura">
-                  <div class="absolute -inset-y-1 left-0 flex  pr-1.5">
-                      <!-- <img src="~/assets/icons-gneric/lupa.svg" class="h-14 cursor-pointer"
-                          alt="icono busqueda" srcset=""> -->
+                  <div class="absolute  left-3 flex ">
+                        <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.7616C6.77208 3.7616 3.75 6.78367 3.75 10.5116C3.75 14.2395 6.77208 17.2616 10.5 17.2616C12.3642 17.2616 14.0506 16.5069 15.273 15.2846C16.4953 14.0622 17.25 12.3758 17.25 10.5116C17.25 6.78367 14.2279 3.7616 10.5 3.7616ZM2.25 10.5116C2.25 5.95525 5.94365 2.2616 10.5 2.2616C15.0563 2.2616 18.75 5.95525 18.75 10.5116C18.75 12.5194 18.032 14.3607 16.8399 15.7909L21.5303 20.4813C21.8232 20.7742 21.8232 21.249 21.5303 21.5419C21.2374 21.8348 20.7626 21.8348 20.4697 21.5419L15.7793 16.8515C14.3491 18.0436 12.5078 18.7616 10.5 18.7616C5.94365 18.7616 2.25 15.0679 2.25 10.5116Z" fill="#0F172A"/>
+                        </svg>
                   </div>
 
                   <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" v-model="buscarpalabra"  @keyup.enter="mostrarResultados"
@@ -79,8 +80,6 @@
                 </NuxtLink>
 
             </div>
-
-            
 
         </nav>
         </span>
