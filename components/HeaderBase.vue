@@ -3,8 +3,8 @@
     <header class="fixed   inset-x-0  top-0 z-50 font-manrope " :class="props.classHeaderBase">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact/>
-        <span class="flex w-full items-center justify-center">
-        <nav class="flex items-center justify-between p-6 h-24 bg-elecktranegro px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
+        <span class="flex w-full items-center justify-center bg-elecktranegro ">
+        <nav class="flex items-center justify-between p-6 h-24  px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
             
 
             <div class="flex lg:flex items-center " @click="goToInicio">
@@ -12,6 +12,32 @@
                     <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo2.png" alt="" />
                 </NuxtLink>
             </div>
+
+      <!-- buscador -->
+      <div>
+          <UDropdown :items="itemsbusqsugest"  :disabled="true" v-model:open="open"
+              :popper="{ placement: 'bottom-start' }"
+              :ui="{ width: 'w-full md:w-[36rem]', rounded: 'rounded-none',item:{rounded:'rounded-none',active:'bg-white'} }">
+              <div class="w-full relative flex items-center" @click="gestionApertura">
+                  <div class="absolute -inset-y-1 left-0 flex  pr-1.5">
+                      <!-- <img src="~/assets/icons-gneric/lupa.svg" class="h-14 cursor-pointer"
+                          alt="icono busqueda" srcset=""> -->
+                  </div>
+
+                  <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" v-model="buscarpalabra"  @keyup.enter="mostrarResultados"
+                      class="block w-full rounded-full border-0 py-2.5 pr-24 text-gray-700 font-normal shadow-sm ring-1 ring-inset pl-12 ring-gray-300  placeholder:text-gray-400 focus:ring-1 border-none outline-none 0 font-lato sm:text-sm sm:leading-6" />
+
+
+              </div>
+              <template #getting-started>
+                  <BusquedaComp :findword="buscarpalabra" />
+            </template>
+          </UDropdown>
+      </div>
+      <!-- end buscador  -->
+
+
+       
 
             <div class="flex lg:hidden">
                 <button type="button"
@@ -159,12 +185,37 @@ function programasMobile() {
 
 
 
-
-
 const props = defineProps({
     classHeaderBase:String,
     absosticky:String
 })
+
+const itemsbusqsugest = [
+    [{
+        slot: 'getting-started'
+    }]
+]
+
+const buscarpalabra=ref('')
+watch(
+  () => buscarpalabra.value,
+  (newRoute) => {
+    // getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
+    
+  }
+)
+const open = ref(false)
+function gestionApertura(){
+    open.value=true
+}
+async function mostrarResultados(){
+    const searchST=useSearchStore()
+    searchST.setword(buscarpalabra.value)
+    getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
+     await navigateTo(`/search/?query=${searchST.word}`)
+     open.value=false
+}
+
 
 
 

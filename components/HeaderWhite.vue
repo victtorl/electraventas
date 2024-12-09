@@ -1,7 +1,7 @@
 <template>
-    <header class=" fixed inset-x-0  top-0 z-50 bg-elecktranegro  font-manrope" :class="props.classHeaderWhite">
+    <header class=" fixed inset-x-0  top-0 z-50 bg-elecktraamarillo  font-manrope" :class="props.classHeaderWhite">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
-        <HeaderContact/>
+        <HeaderContactWhite/>
         <span class="w-full flex justify-center items-center" >
         <nav class="flex items-center justify-between h-24 px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">
             <!-- <div class="flex lg:flex-1" @click="goToInicio">
@@ -12,7 +12,7 @@
             </div> -->
             <div class="flex lg:flex-1" @click="goToInicio">
                 <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo2.png" alt="" />
+                    <img class="h-16  lg:hidden xl:block xl:h-16   " src="~/assets/imgs/tec_logo_b.png" alt="" />
                 </NuxtLink>
             </div>
 
@@ -27,23 +27,23 @@
             <div class="hidden  lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4">
 
                 <NuxtLink @click="goToInicio" to="/"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Inicio
                 </NuxtLink>
                 <NuxtLink  to="/nosotros"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Nosotros
                 </NuxtLink>
                 <NuxtLink  to="/productos"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Productos
                 </NuxtLink>
                 <NuxtLink  to="/marcas"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Marcas
                 </NuxtLink>
                 <NuxtLink  to="/ofertas"
-                    class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
+                    class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Oferta
                 </NuxtLink>
 

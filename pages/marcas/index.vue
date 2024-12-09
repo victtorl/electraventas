@@ -2,6 +2,8 @@
 
     <div class="pt-44 px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 py-10" >
 
+
+
       <h1 className="px-5 bg-elecktraamarillo border  text-elecktranegro font-medium rounded-[30px] w-fit mx-auto">
            Principales marcas
         </h1>

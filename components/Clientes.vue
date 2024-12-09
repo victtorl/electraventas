@@ -2,11 +2,13 @@
 
 
 
-<div class="w-full py-2 bg-white text-elecktranegro text-center " >
+<div class="w-full py-2 bg-white text-elecktranegro text-center   " >
+    <div class="w-full  flex justify-center " >
         <div class="px-auto px-6 lg:px-16 py-0 w-full 3xl:w-maxdesk 3xl:px-0" >
-            <div class="w-full h-12 mb-8 bg-elecktraamarillo " ></div>
+            <div class="w-full h-8 mb-8 bg-elecktraamarillo " ></div>
         </div>
-        <h3 class="text-3xl font-bold font-manrope" >Distribuimos las mejores marcas</h3>
+    </div>
+        <h3 class="text-4xl font-bold font-manrope" >Distribuimos las mejores marcas</h3>
 </div>
 
     <div class="flex  justify-center w-full   text-md" id="#agendarcita" >

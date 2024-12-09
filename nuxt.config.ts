@@ -17,7 +17,6 @@ export default defineNuxtConfig({
       isCustomElement: (tag) => ['lite-youtube'].includes(tag),
     },
   },
-
   modules:[
     '@vueuse/nuxt',
     "@nuxt/ui",

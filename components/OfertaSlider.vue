@@ -2,13 +2,13 @@
 
 
 
-  <div class="w-full  flex-1  max-w-full bg-elecktranegro overflow-hidden">
+  <div class="w-full  flex-1  max-w-full bg-white overflow-hidden pl-4">
     <ClientOnly>
       <swiper-container ref="containerRef" :init="false">
         <swiper-slide v-for="(slide, idx) in proST.groupOfertas" :key="idx" style="height: auto;">
 
 
-          <div class="rounded overflow-hidden w-56 shadow-lg bg-white flex flex-col ">
+          <div class="rounded overflow-hidden w-64 shadow-lg bg-white border-2 border-elektraplomo/50 flex flex-col ">
             <a
               class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">
               {{ slide.data.marca }}
@@ -150,7 +150,7 @@ const swiper = useSwiper(containerRef,{
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 3.5,
       spaceBetween: 50,
     },
   },

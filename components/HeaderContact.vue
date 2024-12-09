@@ -1,6 +1,6 @@
 <template>
         <div class="hidden lg:flex justify-center text-elecktranegro bg-elecktraamarillo text-xs lg:text-sm font-manrope " >
-          <div class="px-auto px-6 lg:px-16 w-full 3xl:w-maxdesk 3xl:px-0 bg-elecktraamarillo flex flex-col items-center md:flex-row  justify-between">
+          <div class="px-auto px-6 lg:px-16 w-full 3xl:w-maxdesk 3xl:px-0  flex flex-col items-center md:flex-row  justify-between">
             <ul class="flex gap-x-6 items-center justify-between text-center my-2" >
                 <li class="flex flex-col lg:flex-row items-center gap-x-1  gap-y-2 h-16 md:h-auto" >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
