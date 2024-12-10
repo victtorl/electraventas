@@ -37,42 +37,9 @@
           :medida="item.data.medida"
           :imagen="item.data.imagenes[0]"
           :id="item.id"
-          :quantity="item.quantity"
-           @actualizar-componente-externo="ActualizarCompExterno"          
+          :quantity="item.quantity"  
           />
     </div>
-
-
-
-
-
-    <!-- modal -->
-    <div class="w-full h-full bg-red-500">
-        <UModal v-model="estadomodal" fullscreen :ui="{ background: 'bg-dark-500 dark:bg-transparent' }">
-            <UCard :ui="{
-                base: 'h-full w-full flex flex-col',
-                rounded: '',
-                background: 'bg-dark-600 dark:bg-transparent',
-                body: {
-                    base: 'grow'
-                }
-            }">
-
-                <div class="flex items-center justify-between ">
-                    <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-                    </h3>
-                </div>
-
-                    <div class="w-full h-full grid grid-cols-1 place-items-center content-center ">
-
-                        <div class="w-[100%] md:w-[80%]  h-full ">
-                            <ItemAgregado @sendinfo="cerrarModal"  />
-                        </div>
-                    </div>
-            </UCard>
-        </UModal>
-    </div>
-
 
 
 </div>
@@ -84,31 +51,6 @@
 import { getAllProducts } from '~/firebase';
 
 
-const estadomodal = ref(false)
-
-function cerrarModal() {
-    estadomodal.value = false
-    unselectVariant() //quita la seleccion de variante
-}
-function abrirModal() {
-        // console.log(itemcart.value);     
-        estadomodal.value = true
-}
-
-
-function sendItemsToCart(){
-    let existItemSelectedInCart = cartST.items.find(u => u.id === prodDetST.detailproduct.id)
-    if(existItemSelectedInCart){
-        cartST.updateQuantity(existItemSelectedInCart?.id,existItemSelectedInCart?.quantity+cantstage.value)
-        abrirModal()
-    }else{
-        cartST.addSeveralItems(itemcart.value,cantstage.value)
-        abrirModal()
-    }
-    cantstage.value=1
-
-}
-
 
 const proST=useProductStore()
   ///LLENAR LOS PRODUCTOS AL MONTAR EL COMPONENTE
@@ -116,9 +58,6 @@ const proST=useProductStore()
     getAllProducts()
   })
 
-const key=ref(1)
-function ActualizarCompExterno(){
-    key.value = key.value + 1
-}
+
   
 </script>

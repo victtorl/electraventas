@@ -5,9 +5,7 @@
             </a>
             <div class="relative"><a href="#">
                 <img class="w-full h-44  px-6 pt-6 mt-6 z-100" :src="props.imagen?props.imagen:'https://w7.pngwing.com/pngs/765/963/png-transparent-houseplant-silhouette-flowerpot-plant-silhouette-animals-monochrome-computer-wallpaper-thumbnail.png'" alt="">
-                <!-- <div
-                    class="hover:bg-transparent transition duration-300 absolute z-10 bottom-0 top-0 right-0 left-0 bg-elecktranegro opacity-25">
-                </div> -->
+
               </a>
               <a  v-if="props.oferta" >
                 <div
@@ -34,7 +32,6 @@
               <a href="#"
                 class="font-medium text-lg  leading-5 text-center hover:text-black transition duration-500 ease-in-out inline-block ">
                 {{ props.nombre }}
-                <!-- {{ props.id }} -->
               </a>
 
               <p class="text-gray-500 text-sm text-center">
@@ -50,6 +47,7 @@
             <div class="px-6 py-3  flex flex-row items-center justify-between  bg-gray-100">
 
               <button
+                @click="sendItemsToCart(props.id)"
                 class="py-1 text-xs w-36  font-regular  border-[1.5px] box-button px-2 rounded-md  mr-1 flex flex-row items-center">
                 <span class="svg-container">
                   <svg class="icon-svg" width="24" height="24" viewBox="0 0 24 24" enable-background="new 0 0 612 792"
@@ -63,23 +61,23 @@
                   </svg>
                 </span>
 
-                <p class="ml-1"  @click="sendItemsToCart(props.id)" > Añadir a Cotizar</p>
+                <p class="ml-1"> Añadir a Cotizar</p>
               </button>
 
               <div>
                 <div type="button"  @click="emit('actualizar-componente-externo')"
                     class="flex items-center px-2.5 py-1.5 border border-gray-300 text-gray-800 text-xs outline-none bg-transparent rounded-md">
                    
-                    <span class="cursor-pointer">
-                     <svg  @click="minusQuantityItem()" xmlns="http://www.w3.org/2000/svg" class="w-2.5 fill-current" viewBox="0 0 124 124">
+                    <span  @click="minusQuantityItem()"  class="cursor-pointer">
+                     <svg  xmlns="http://www.w3.org/2000/svg" class="w-2.5 fill-current" viewBox="0 0 124 124">
                        <path d="M112 50H12C5.4 50 0 55.4 0 62s5.4 12 12 12h100c6.6 0 12-5.4 12-12s-5.4-12-12-12z" data-original="#000000"></path>
                       </svg>
                     </span>
 
                     <span class="mx-2.5"> {{ cantstage }}</span>
                     
-                    <span class="cursor-pointer">
-                    <svg  @click="addQuantityItem()"  xmlns="http://www.w3.org/2000/svg" class="w-2.5 fill-current" viewBox="0 0 42 42">
+                    <span @click="addQuantityItem()"  class="cursor-pointer">
+                    <svg   xmlns="http://www.w3.org/2000/svg" class="w-2.5 fill-current" viewBox="0 0 42 42">
                         <path d="M37.059 16H26V4.941C26 2.224 23.718 0 21 0s-5 2.224-5 4.941V16H4.941C2.224 16 0 18.282 0 21s2.224 5 4.941 5H16v11.059C16 39.776 18.282 42 21 42s5-2.224 5-4.941V26h11.059C39.776 26 42 23.718 42 21s-2.224-5-4.941-5z" data-original="#000000"></path>
                     </svg>
                     </span>
@@ -133,7 +131,7 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 12.0046C2.25 6.61986 6.61522 2.25464 12 2.25464C17.3848 2.25464 21.75 6.61986 21.75 12.0046C21.75 17.3894 17.3848 21.7546 12 21.7546C6.61522 21.7546 2.25 17.3894 2.25 12.0046ZM15.6103 10.1906C15.8511 9.85351 15.773 9.3851 15.4359 9.14434C15.0989 8.90358 14.6305 8.98165 14.3897 9.31871L11.1543 13.8483L9.53033 12.2243C9.23744 11.9314 8.76256 11.9314 8.46967 12.2243C8.17678 12.5172 8.17678 12.9921 8.46967 13.285L10.7197 15.535C10.8756 15.6909 11.0921 15.7703 11.3119 15.7521C11.5316 15.7339 11.7322 15.62 11.8603 15.4406L15.6103 10.1906Z" fill="#0F172A"/>
                                 </svg>
-                                <p class="font-josefS font-normal text-[#6B6969] text-sm md:text-xl lg:text-2xl py-6">Lo que llevas en tu carro</p>
+                                <p class="font-josefS font-normal text-[#6B6969] text-sm md:text-xl lg:text-2xl py-6">Lo que incluyes en tu cotización</p>
                             </div>
 
                             <div class="flex flex-row justify-between items-start    sm:gap-x-10  p-4 lg:p-10 ">
@@ -199,9 +197,6 @@
 </template>
 
 <script setup >
-
-const emit = defineEmits(['actualizar-componente-externo'])
-
 
 const estadomodal = ref(false)
 
