@@ -13,7 +13,7 @@
                     <img src="/assets/landing-imgs/oferta/oferta.jpeg" class=" w-full  " alt="">
                 </div>
                 <div class=" w-64"  >
-                    <p class="font-bold text-[24px] text-elecktranegro py-4" >La oferta termina en</p>
+                    <p class="font-bold text-xl lg:text-[24px] text-elecktranegro py-4" >La oferta termina en</p>
                     <div>
                     <ClientOnly>
                         <vue-countdown :time="diferenciaMilisegundosDesdeHoy(realmana)" v-slot="{ days, hours, minutes, seconds }">

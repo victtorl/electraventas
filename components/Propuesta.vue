@@ -1,8 +1,8 @@
 <template>
     <div class="flex justify-center w-full font-manrope  text-elecktranegro text-md" id="#agendarcita" >
       <div class="px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0 bg-elecktraamarillo flex justify-between ">
-        <ul  class=" grid grid-cols-1 sm:grid-cols-2 lg:flex gap-y-4 font-semibold gap-x-6  w-full   lg:justify-between relative" >
-            <li class="flex  items-center gap-x-4  w-48 lg:w-full  justify-center " >   
+        <ul  class=" grid grid-cols-2 sm:grid-cols-2 text-sm sm:text-base lg:flex gap-y-4 font-semibold gap-x-6  w-full   lg:justify-between relative" >
+            <li class="flex  items-center gap-x-4 w-44  sm:w-full lg:w-full  justify-start lg:justify-center " >   
                 <!-- <img src="~/assets/icons/propuesta-shield.svg" class="w-6 h-6" alt="shield" srcset=""> -->
                 <div v-motion-pop-visible > 
                 <svg  width="40" height="40" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -17,7 +17,7 @@
                 </div>
                 <h4>Calidad garantizada</h4>
             </li>
-            <li class="flex items-center gap-x-4  w-48 lg:w-full  justify-center " >
+            <li class="flex items-center gap-x-4 w-44  sm:w-full lg:w-full  justify-start lg:justify-center " >
                 <div v-motion-pop-visible > 
                 <svg width="35" height="35" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="96" height="96" fill="url(#pattern0_1_13)"/>
@@ -32,7 +32,7 @@
                 <h4>Atención Personalizada</h4>
             </li>
 
-            <li class="flex items-center gap-x-4  w-48 lg:w-full  justify-center " >
+            <li class="flex items-center gap-x-4 w-44  sm:w-full lg:w-full  justify-start lg:justify-center " >
                 <div v-motion-pop-visible > 
                 <svg width="40" height="40" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="96" height="96" fill="url(#pattern0_1_12)"/>
@@ -46,7 +46,7 @@
                 </div>
                 <h4>Envíos a Nivel Nacional</h4>
             </li>
-            <li class="flex items-center gap-x-4  w-48 lg:w-full  justify-center " >
+            <li class="flex items-center gap-x-4 w-44  sm:w-full lg:w-full  justify-start lg:justify-center " >
                 <div v-motion-pop-visible > 
                 <svg width="40" height="40" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <rect width="96" height="96" fill="url(#pattern0_1_14)"/>
@@ -61,7 +61,7 @@
                 <h4>Precios competitivos</h4>
             </li>
 
-            <div class="w-auto px-4 font-bold bg-elecktraamarillo absolute -top-14 rounded-t-lg text-center py-2" >
+            <div class="w-auto px-4 font-bold bg-elecktraamarillo absolute -top-12 lg:-top-14 rounded-t-lg text-center py-2" >
                 ¿Porqué comprar en TEC?
             </div>
 
