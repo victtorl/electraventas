@@ -1,7 +1,7 @@
 <template>
     <div  class="w-full flex pt-8 justify-center bg-white text-elecktranegro">
         <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col  lg:flex-row text-center items-center">
-            <p v-motion-pop-visible class="text-3xl font-bold font-manrope w-[500px] text-start  "  >Revisa nuestras ofertas</p>
+            <p v-motion-pop-visible class="text-3xl font-bold font-manrope lg:w-[500px] text-start  "  >Revisa nuestras ofertas</p>
             <div class="w-full bordet-t-2 border-2 border-elecktraamarillo" ></div>
         </div>
     </div>

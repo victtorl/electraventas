@@ -38,9 +38,6 @@
 <script setup>
 import { getAllProducts } from '~/firebase';
 
-const detailST=useDetailProduct()
-
-const proST=useProductStore()
   ///LLENAR LOS PRODUCTOS AL MONTAR EL COMPONENTE
   onMounted(() => {
     getAllProducts()
