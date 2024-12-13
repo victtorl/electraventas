@@ -1,36 +1,22 @@
 import { defineStore } from "pinia";
 
 
-
-interface IdetailProduct {
-  createdAt:string,
-  pictureUrl:string,
-  gallery:[{
-    url:string
-  }],
-  group:[{
-    url:string,
-    id:string,
-    name:string,
-  }]
-  id:string
-  price:number
-  
-  name:string,
-  description:string,
-  relatedProducts:[{
-    price:number,
-    name:string,
-    slug:string,
-    pictureUrl:string
-  }],
-
+interface Iimages{
+  imagenes:string
 }
 
-export const useDetailProduct=defineStore("detailproduct-store-elektra",() => {
+interface IdetailProduct{
+//  nombre:string,
+//  marca:string,
+//  codigo:string
+//  medida:string,
+//  imagenes:Iimages[]
+}
+
+export const useDetailProduct=defineStore("detailproduct",() => {
 
   // const detailproduct = ref({} as IdetailProduct);
-    const detailproduct = ref<IdetailProduct>(JSON.parse(localStorage.getItem('detailProductElektra') as string) || {} as IdetailProduct);
+    const detailproduct = ref<IdetailProduct>(JSON.parse(localStorage.getItem('detailProduct-elektra') as string) || {} as IdetailProduct);
 
 
   function llenarDatos(itm:IdetailProduct){

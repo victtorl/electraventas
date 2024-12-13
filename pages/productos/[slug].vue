@@ -1,5 +1,5 @@
 <template>
-    <div class=" p-5 sm:p-10 md:p-16 min-h-[50vh] bg-elecktranegro/30  ">
+    <div class=" p-5 sm:p-10 md:p-16 min-h-[50vh] bg-white  ">
         
 
 <div class="border-b mb-5 flex justify-between text-sm pt-28 ">
@@ -17,30 +17,18 @@
                 <path d="M53.527,192.864c-2.187,3.518-1.109,8.142,2.409,10.329l183.478,114.081c1.232,0.767,2.601,1.132,3.953,1.132 c2.506,0,4.956-1.256,6.376-3.541c2.187-3.518,1.109-8.142-2.409-10.329L63.856,190.455 C60.338,188.266,55.714,189.346,53.527,192.864z"> </path>
             </g>
         </svg>
-        <a href="#" class="font-semibold inline-block">Lista de productos</a>
+        <a href="#" class="font-semibold inline-block">Detalle de producto</a>
     </div>
     <!-- <a href="#">See All</a> -->
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10">
+<div class="grid grid-cols-1   gap-10 bg-red-600">
 
+    
+    <DetalleProducto/>
 
-    <!-- CARD 3 -->
-    <div v-for="item in proST.groupProducts"  class="rounded overflow-hidden shadow-lg bg-white flex flex-col  ">
-        
-          <ProductCart 
-          :codigo="item.data.codigo" 
-          :nombre="item.data.nombre"
-          :marca="item.data.marca"
-          :oferta="item.data.oferta"
-          :medida="item.data.medida"
-          :imagen="item.data.imagenes[0]"
-          :id="item.id"
-          :quantity="item.quantity"  
-          />
-    </div>
-
+    
 
 </div>
 
@@ -50,7 +38,7 @@
 <script setup>
 import { getAllProducts } from '~/firebase';
 
-
+const detailST=useDetailProduct()
 
 const proST=useProductStore()
   ///LLENAR LOS PRODUCTOS AL MONTAR EL COMPONENTE
@@ -59,5 +47,4 @@ const proST=useProductStore()
   })
 
 
-  
 </script>

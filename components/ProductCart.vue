@@ -1,6 +1,6 @@
 <template>
                <a
-              class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc">
+              class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc ">
               {{ props.marca }}
             </a>
             <div class="relative"><a href="#">
@@ -29,10 +29,10 @@
               </a>
             </div>
             <div class="px-2 w-full text-center  py-1 flex flex-col items-center justify-center ">
-              <a href="#"
-                class="font-medium text-lg  leading-5 text-center hover:text-black transition duration-500 ease-in-out inline-block ">
+              <NuxtLink :to="`/productos/${props.id}`" @click="llenarDetalleProducto(props.id)"
+                class="font-medium text-lg  leading-5 py-1 text-center hover:text-black cursor-pointer hover:underline transition duration-500 ease-in-out inline-block module line-clamp">
                 {{ props.nombre }}
-              </a>
+              </NuxtLink>
 
               <p class="text-gray-500 text-sm text-center">
                 <span class="text-md font-bold ">Cod</span> {{ props.codigo }}
@@ -64,7 +64,7 @@
                 <p class="ml-1"> Añadir a Cotizar</p>
               </button>
 
-              <div>
+              <div class="hidden sm:block"  >
                 <div type="button"  @click="emit('actualizar-componente-externo')"
                     class="flex items-center px-2.5 py-1.5 border border-gray-300 text-gray-800 text-xs outline-none bg-transparent rounded-md">
                    
@@ -198,6 +198,8 @@
 
 <script setup >
 
+const detailST=useDetailProduct()
+
 const estadomodal = ref(false)
 
 function cerrarModal() {
@@ -284,4 +286,35 @@ function sendItemsToCart(idcart){
 
 }
 
+
+
+
+
+const llenarDetalleProducto=(idprod) => {
+      const prodST=useProductStore()
+      const aux=prodST.groupProducts.filter(u=>u.id==idprod)
+      detailST.llenarDatos(aux[0])
+      
+}
+
 </script>
+
+
+<style>
+.module {
+  /* width: 250px; */
+  margin: 0 0 0.5em 0;
+  overflow: hidden;
+}
+
+.module p {
+  margin: 0;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+</style>
