@@ -1,6 +1,6 @@
 <template>
 
-    <div class="pt-44 px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 py-10" >
+    <div class="pt-12 sm:pt-16  lg:pt-44 px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 py-10" >
 
 
 

@@ -2,7 +2,7 @@
     <div class=" p-5 sm:p-10 md:p-16 min-h-[50vh] bg-white  ">
         
 
-<div class="border-b mb-5 flex justify-between text-sm pt-28 ">
+<div class="border-b mb-5 flex justify-between text-sm pt-10 sm:pt-8  lg:pt-24 ">
     <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase">
         <svg class="h-6 mr-3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.005 455.005"

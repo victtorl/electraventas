@@ -2,7 +2,7 @@
     <div class=" p-5 sm:p-10 md:p-16  bg-elecktranegro/30  ">
         
 
-<div class="border-b mb-5 flex justify-between text-sm pt-36  ">
+<div class="border-b mb-5 flex justify-between text-sm pt-10 sm:pt-8  lg:pt-24 ">
     <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase ">
         <svg class="h-6 mr-3" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 455.005 455.005"
@@ -24,7 +24,7 @@
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 pb-64  gap-10">
+<div class="grid grid-cols-1 xs:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 pb-64  gap-10">
 
 
     <!-- CARD 3 -->

@@ -1,6 +1,6 @@
 <template>
 
-  <div class="pt-[180px]" >
+  <div class="pt-10 sm:pt-16 lg:pt-[180px]" >
     <QuienesSomos/>
   </div>
 
