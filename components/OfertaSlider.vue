@@ -2,13 +2,13 @@
 
 
 
-  <div class="w-full  flex-1  max-w-full bg-white overflow-hidden pl-4">
+  <div class="w-full  flex-1  max-w-full bg-white overflow-hidden lg:pl-4">
     <ClientOnly>
       <swiper-container ref="containerRef" :init="false">
         <swiper-slide v-for="(slide, idx) in proST.groupOfertas" :key="idx" style="height: auto;">
 
 
-          <div class="rounded overflow-hidden w-64 shadow-lg bg-white border-2 border-elektraplomo/50 flex flex-col ">
+          <div class="rounded overflow-hidden flex  w-64 shadow-lg bg-white border-2 border-elektraplomo/50  flex-col ">
            
             <ProductCart
             :codigo="slide.data.codigo"
@@ -84,11 +84,11 @@ const swiper = useSwiper(containerRef,{
   },
   breakpoints: {
     640: {
-      slidesPerView: 3.5,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 3.5,
+      slidesPerView: 2.5,
       spaceBetween: 40,
     },
     1024: {

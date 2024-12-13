@@ -49,7 +49,7 @@
                 </button>
             </div>
 
-            <div class="hidden bg lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4 ">
+            <div class="hidden  lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4 ">
 
                 <NuxtLink to="/"
                     class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">

@@ -10,7 +10,7 @@
 
                 <div class="flex items-center  gap-x-2" >
                     <span class="w-16   border-t-4 border-elecktranegro" ></span>
-                    <p v-motion-pop-visible class="text-3xl font-bold"> Sobre Trading Electric C & C</p>
+                    <p v-motion-pop-visible class="text-2xl sm:text-3xl font-bold"> Sobre Trading Electric C & C</p>
                 </div>
                 <h4 class="text-sm sm:text-base lg:text-2xl xl:text-3xl xl:leading-8 pt-4 font-bold text-elecktranegro " >¿Quiénes somos?</h4>
                 <p  class=" text-sm sm:text-base lg:text-[16px] lg:w-[560px] py-4" >
@@ -36,7 +36,7 @@
 
                 <NuxtLink to="/nosotros">
                                 <button type="button"
-                                    class="border-2 rounded-xl bg-elecktraamarillo text-elecktranegro hover:bg-elecktranegro hover:text-white  mt-8 px-2 lg:px-2 xl:px-6 py-3  text-base lg:text-sm xl:text-md font-medium  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                                    class="border-2 rounded-xl font-bold bg-elecktraamarillo text-elecktranegro hover:bg-elecktranegro hover:text-white  mt-8 px-2 lg:px-2 xl:px-6 py-3  text-base lg:text-sm xl:text-md   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                                     Ver todo sobre nosotros
                                 </button>
                 </NuxtLink>

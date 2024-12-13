@@ -45,7 +45,7 @@
 
           <NuxtLink target="_blank" to="https://heyzine.com/flip-book/60e742ff40.html" >
                     <button type="button"   
-                        class=" hover:bg-elecktranegro hover:text-white font-medium px-6 translate-y-8 mt-6 bg-elecktraamarillo text-main-black rounded-lg   px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                        class=" hover:bg-elecktranegro px-4 hover:text-white font-bold translate-y-8 mt-6 bg-elecktraamarillo text-main-black rounded-lg    lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Revisa nuestro catálogo
                     </button>
           </NuxtLink>

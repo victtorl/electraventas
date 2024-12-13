@@ -2,13 +2,13 @@
 
 
 
-<div class="w-full py-2 bg-white text-elecktranegro text-center   " >
+<div class="w-full py-2 bg-white text-elecktranegro text-start sm:text-center  " >
     <div class="w-full  flex justify-center " >
         <div class="px-auto px-6 lg:px-16 py-0 w-full 3xl:w-maxdesk 3xl:px-0" >
             <div class="w-full h-8 mb-8 bg-elecktraamarillo " ></div>
         </div>
     </div>
-        <h3 class="text-4xl font-bold font-manrope" >Distribuimos las mejores marcas</h3>
+        <h3 class="text-3xl sm:text-4xl px-auto px-6 sm:px-0 font-bold font-manrope" >Distribuimos las mejores marcas</h3>
 </div>
 
     <div class="flex  justify-center w-full   text-md" id="#agendarcita" >
@@ -36,7 +36,7 @@
         </div>
         <NuxtLink to="/contacto">
             <button type="button"
-                class="border-[1.5px] my-4 rounded-lg border-white  bg-elecktranegro hover:bg-elecktraamarillo hover:text-black font-bold  hover:border-yellow-400 text-white px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
+                class="border-[1.5px] my-4 px-4 rounded-lg border-white  bg-elecktranegro hover:bg-elecktraamarillo hover:text-black font-bold  hover:border-yellow-400 text-white  lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                 Cotizar ahora
             </button>
         </NuxtLink>

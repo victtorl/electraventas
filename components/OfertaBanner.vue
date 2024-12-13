@@ -8,12 +8,12 @@
     <div  class="w-full flex py-8 justify-center bg-white text-black">
         <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col lg:flex-row  items-center">
             <!-- start oferta -->
-            <div class="flex lg:flex-col items-center gap-x-4 my-4 lg:my-0  xl:w-64" >
+            <div class="flex lg:flex-col items-center gap-x-4  my-4 lg:my-0  sm:w-64" >
                 <div class="" >
                     <img src="/assets/landing-imgs/oferta/oferta.jpeg" class=" w-full  " alt="">
                 </div>
                 <div class=" w-64"  >
-                    <p class="font-bold text-xl lg:text-[24px] text-elecktranegro py-4" >La oferta termina en</p>
+                    <p class="font-bold text-xl lg:text-[24px] text-elecktranegro lg:py-4" >La oferta termina en</p>
                     <div>
                     <ClientOnly>
                         <vue-countdown :time="diferenciaMilisegundosDesdeHoy(realmana)" v-slot="{ days, hours, minutes, seconds }">
