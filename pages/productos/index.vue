@@ -1,6 +1,6 @@
 <template>
     <div class=" p-5 sm:p-10 md:p-16 min-h-[50vh] bg-white  ">
-        
+   
 
 <div class="border-b mb-5 flex justify-between text-sm pt-10 sm:pt-8  lg:pt-24 ">
     <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase">
@@ -23,7 +23,7 @@
 </div>
 
 
-<div class="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10">
+<div class="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-4">
 
 
     <!-- CARD 3 -->

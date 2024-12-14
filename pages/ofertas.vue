@@ -1,5 +1,5 @@
 <template>
-    <div class=" p-5 sm:p-10 md:p-16  bg-elecktranegro/30  ">
+    <div class=" p-5 sm:p-10 md:p-16  bg-white  ">
 
 <div class="border-b mb-5 flex justify-between text-sm pt-10 sm:pt-8  lg:pt-24 ">
     <div class="text-black flex items-center pb-2 pr-2 border-b-2 border-black uppercase">
@@ -22,11 +22,11 @@
 </div>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10">
+<div class="grid grid-cols-2 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-4">
 
 
     <!-- CARD 3 -->
-    <div  v-for="item in proST.groupOfertas" class="rounded overflow-hidden shadow-lg bg-white flex flex-col ">
+    <div  v-for="item in proST.groupOfertas" class="rounded overflow-hidden shadow-lg bg-white flex flex-col border-2 border-elecktranegro/20">
         <ProductCart
               :codigo="item.data.codigo"
               :nombre="item.data.nombre"
