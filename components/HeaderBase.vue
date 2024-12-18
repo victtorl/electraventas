@@ -20,7 +20,7 @@
                   <!-- logo only mobile start -->
                   <div class="flex lg:hidden items-center " @click="goToInicio">
                       <NuxtLink to="/" class="-m-1.5 p-1.5" @click="mobileMenuOpen = false">
-                          <img class="h-8 pl-2    " src="~/assets/imgs/tec_logo2.png" alt="" />
+                          <img class="h-8 w-28 pl-2    " src="~/assets/imgs/tec_logo_y_notitle.png" alt="" />
                       </NuxtLink>
                   </div>
                   <!-- logo only mobile end -->
