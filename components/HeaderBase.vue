@@ -200,26 +200,28 @@
                       <div class="-my-6 divide-y divide-gray-500/10">
   
                           <div class="space-y-2 py-6 text-elecktranegro">
-                              <NuxtLink to="/" @click="mobileMenuOpen=false"
-                                  class="-mx-3 block  rounded-lg px-3 py-2 text-xl font-semibold   hover:underline">
-                                  Inicio
-                              </NuxtLink>
-                              <NuxtLink to="/nosotros" @click="mobileMenuOpen=false"
-                                  class="-mx-3 block  rounded-lg px-3 py-2 text-xl font-semibold   hover:underline">
-                                  Nosotros
-                              </NuxtLink>
-                              <NuxtLink to="/productos" @click="mobileMenuOpen=false"
-                                  class="-mx-3 block  rounded-lg px-3 py-2 text-xl font-semibold   hover:underline">
-                                  Productos
-                              </NuxtLink>
-                              <NuxtLink to="/marcas" @click="mobileMenuOpen=false"
-                                  class="-mx-3 block  rounded-lg px-3 py-2 text-xl font-semibold   hover:underline">
-                                  Marcas
-                              </NuxtLink>
-                              <NuxtLink to="/ofertas" @click="mobileMenuOpen=false"
-                                  class="-mx-3 block  rounded-lg px-3 py-2 text-xl font-semibold   hover:underline">
-                                  Ofertas
-                              </NuxtLink>
+                            <ul role="list" class="divide-y divide-gray-100">
+                                    <li v-for="item in options" :key="item.value" class="relative py-5 w-full md:w-64 hover:bg-gray-50">
+                                        <div class="px-4 sm:px-6 lg:px-8">
+                                            <div class="mx-auto flex max-w-4xl justify-between gap-x-6">
+                                                <div class="flex min-w-0 gap-x-4">
+                                                    <div class="min-w-0 flex-auto">
+                                                        <p class="text-sm/6 font-semibold  text-gray-900">
+                                                            <a :href="item.value">
+                                                                <span class="absolute inset-x-0  -top-px bottom-0" />
+                                                                {{ item.text }}
+                                                            </a>
+                                                        </p>
+                                                    <ChevronRightIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                          
   
   
   
@@ -283,7 +285,20 @@
   }
   
   
-  
+  const options = ref([
+      { text: 'Herramientas para terminales y cables', value: 1 },
+      { text: 'Mangas termocontraibles ', value: 2 },
+      { text: 'Terminales de compresión', value: 3 },
+      { text: 'Terminales sobremoldeados', value: 3 },
+      { text: 'Cintillos y Espirales', value: 4 },
+      { text: 'Enchufes y Tomas Industriales', value: 5 },
+      { text: 'Térmicos', value: 6 },
+      { text: 'Productos Rittal', value: 7 },
+      { text: 'Phoenix Contact', value: 8 },
+      { text: 'Canaletas y Riel Din ranuradas', value: 9 },
+      { text: 'Cables', value: 10 },
+      { text: 'Otros', value: 11 },
+])
   
   
   </script>

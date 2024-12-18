@@ -1,5 +1,5 @@
 <template>
-    <header class=" fixed inset-x-0  top-0 z-50 bg-elecktraamarillo  font-manrope" :class="props.classHeaderWhite">
+    <header class="hidden lg:block fixed inset-x-0  top-0 z-40 bg-elecktraamarillo  " :class="props.classHeaderWhite">
         <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContactWhite/>
         <span class="w-full flex justify-center items-center" >
