@@ -202,14 +202,14 @@
 
                         <!-- ACORDEON MOBILE START -->
 
-                        <div class="space-y-2 py-6 flex flex-col  text-elecktranegro text-xl">
+                        <div class="space-y-2 py-6 flex flex-col font-manrope text-elecktranegro text-xl">
 
 
                                 <div id="accordion-nested-parent"  data-accordion="collapse">
 
                                     <!-- inicio start -->
                                     <h2 id="accordion-collapse-heading-0">
-                                        <button type="button" @click="goInico"
+                                        <button type="button" @click="goInico" 
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 rounded-t-xl focus:ring-[1px] bg-elecktranegro focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-collapse-body-0" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-0">
@@ -437,6 +437,7 @@ const router=useRouter()
 const goInico=() => {
     router.push({ path: "/" })
     mobileMenuOpen.value=false
+    
 }
 
 const goNosotros=() => {
