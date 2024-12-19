@@ -209,7 +209,7 @@
 
                                     <!-- inicio start -->
                                     <h2 id="accordion-collapse-heading-0">
-                                        <button type="button"
+                                        <button type="button" @click="goInico"
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 rounded-t-xl focus:ring-[1px] bg-elecktranegro focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-collapse-body-0" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-0">
@@ -234,7 +234,7 @@
 
                                     <!-- nosotros start -->
                                     <h2 id="accordion-collapse-heading-1">
-                                        <button type="button"
+                                        <button type="button" @click="goNosotros"
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-[1px] bg-elecktranegro focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-1">
@@ -296,7 +296,7 @@
 
                                     <!-- marcas start -->
                                     <h2 id="accordion-collapse-heading-3">
-                                        <button type="button"
+                                        <button type="button" @click="goMarcas"
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-[1px] bg-elecktranegro focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-3">
@@ -323,7 +323,7 @@
 
                                     <!-- ofertas start -->
                                     <h2 id="accordion-collapse-heading-4">
-                                        <button type="button"
+                                        <button type="button" @click="goOfertas"
                                             class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 rounded-b-xl  focus:ring-[1px] bg-elecktranegro focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
                                             data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-4">
@@ -432,5 +432,31 @@
       { text: 'Otros', value: 11 },
 ])
   
+
+const router=useRouter()
+const goInico=() => {
+    router.push({ path: "/" })
+    mobileMenuOpen.value=false
+}
+
+const goNosotros=() => {
+    router.push({ path: "/nosotros" })
+    mobileMenuOpen.value=false
+}
+
+const goProductos=() => {
+    router.push({ path: "/" })
+    mobileMenuOpen.value=false
+}
+
+const goMarcas=() => {
+    router.push({ path: "/marcas" })
+    mobileMenuOpen.value=false
+}
+
+const goOfertas=() => {
+    router.push({ path: "/ofertas" })
+    mobileMenuOpen.value=false
+}
   
   </script>
