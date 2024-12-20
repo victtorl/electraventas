@@ -44,8 +44,9 @@
           <span class=" text-xs sm:text-md font-bold ">Unid</span> {{ props.medida }}
         </p>
         <p class="text-gray-500 text-sm text-center">
-          <span class="text-xs sm:text-sm lg:text-md font-bold text-elecktranegro underline cursor-pointer">Ver Ficha
-            Técnica</span>
+          <NuxtLink :to="props.fichatecnica" target="_blank" class="text-xs sm:text-sm lg:text-md font-bold text-elecktranegro underline cursor-pointer">
+            Ver Ficha Técnica
+          </NuxtLink>
         </p>
       </div>
       <div class="px-1 sm:px-6 py-3  flex flex-col gap-y-2    items-center justify-between sm:gap-x-1 bg-gray-100">
@@ -246,7 +247,8 @@ const props = defineProps({
   oferta: Boolean,
   medida: String,
   codigo: String,
-  imagen: String
+  imagen: String,
+  fichatecnica:String
 })
 
 

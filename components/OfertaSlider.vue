@@ -17,6 +17,7 @@
             :oferta="slide.data.oferta"
             :medida="slide.data.medida"
             :imagen="slide.data.imagenes[0]"
+            :fichatecnica="slide.data.fichatecnica"
             :id="slide.id"
             :quantity="slide.quantity"
             />

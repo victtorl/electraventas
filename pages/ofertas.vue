@@ -34,8 +34,10 @@
               :oferta="item.data.oferta"
               :medida="item.data.medida"
               :imagen="item.data.imagenes[0]"
+              :fichatecnica="item.data.fichatecnica"
               :id="item.id"
               :quantity="item.quantity"
+
         />
     </div>
 

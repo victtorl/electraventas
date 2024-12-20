@@ -70,7 +70,7 @@
                 class="rounded overflow-hidden shadow-lg bg-white flex flex-col   ">
                 <ProductCart :codigo="item.data.codigo" :nombre="item.data.nombre" :marca="item.data.marca"
                     :oferta="item.data.oferta" :medida="item.data.medida" :imagen="item.data.imagenes[0]" :id="item.id"
-                    :quantity="item.quantity" />
+                    :quantity="item.quantity" :fichatecnica="item.data.fichatecnica" />
             </div>
         </div>
 </div>        

@@ -409,8 +409,8 @@
   async function mostrarResultados(){
       const searchST=useSearchStore()
       searchST.setword(buscarpalabra.value)
-      getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
-       await navigateTo(`/search/?query=${searchST.word}`)
+    //   getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
+    //    await navigateTo(`/search/?query=${searchST.word}`)
        open.value=false
   }
   
