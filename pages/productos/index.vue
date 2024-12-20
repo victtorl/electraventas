@@ -47,12 +47,12 @@
                         <div class="mx-auto flex max-w-4xl justify-between gap-x-6">
                             <div class="flex min-w-0 gap-x-4">
                                 <div class="min-w-0 flex-auto">
-                                    <p class="text-sm/6 font-semibold  text-gray-900">
-                                        <p>
+                                    <div class="text-sm/6 font-semibold  text-gray-900">
+                                        <div>
                                             <span class="absolute inset-x-0  -top-px bottom-0" />
                                             {{ item.text }}
-                                        </p>
-                                    </p>
+                                        </div>
+                                    </div>
                                 <ChevronRightIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
                                     
                                 </div>

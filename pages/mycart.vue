@@ -226,15 +226,39 @@
     </section>
   </div>
 
-  <button class="w-64 h-12 px-4 py-2 bg-red-500" @click="savepdf" >GUARDAR</button>
+ 
 </div>
+
+<button class="w-64 h-12 px-4 py-2 bg-red-500" @click="savepdf" >opcion PDF</button>
+<button class="w-64 h-12 px-4 py-2 bg-green-dark" @click="sendToWhatsApp" >Opcion Wsp</button>
+<div class="w-full  flex justify-end pb-8">
+  <div class="w-full px-6 lg:px-16  flex justify-center font-manrope 3xl:w-maxdesk 3xl:px-0"  >
+    <div 
+     
+      class="home-two-btn-bg w-64  rounded-2xl py-3.5 group   flex flex-row justify-center items-center bg-elecktraamarillo hover:bg-elecktranegro cursor-pointer text-black mt-2.5 before:bg-it-black after:bg-it-black">
+      <span class="relative z-10 text-base font-semibold text-black transition-all duration-300 group-hover:text-elecktraamarillo  font-inter">
+        Enviar Cotización
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+
 </template>
 
 
+
+
 <script setup>
+import { FwbButton, FwbModal } from 'flowbite-vue'
 import html2pdf from 'html2pdf.js'
 
 const cartST=useCartStore()
+
 
 
 
@@ -246,6 +270,33 @@ function savepdf(){
   }
 
 }
+
+
+
+
+//SEND DETAIL CARRITO
+   const sendToWhatsApp=()=> {
+
+    const cartDetails = [
+      { name: "Producto 1", quantity: 2, price: 50 },
+      { name: "Producto 2", quantity: 1, price: 30 },
+    ];
+
+      const total = cartDetails.reduce((acc, item) => acc + item.quantity * item.price, 0);
+
+      let message = "🛒 *Detalle del Carrito de Compras:*\n *nombre:'Julian Alvarez*' \n *numero:'9856423694'*\n";
+      cartDetails.forEach(item => {
+        message += `- ${item.name} x${item.quantity} = $${item.quantity * item.price}\n`;
+      });
+      message += `\n*Total: $${total}*`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const phoneNumber = "+51982043391"; // Número con código de país
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      window.open(whatsappUrl, "_blank");
+    }
+  
 
 
 </script>
