@@ -1,7 +1,7 @@
 <template>
 
 <div class="pt-[180px] w-full flex justify-center">
-  <div class="w-full px-6 lg:px-16  font-manrope 3xl:w-maxdesk 3xl:px-0" >
+  <div class="w-full px-6 lg:px-16  font-manrope 3xl:w-maxdesk 3xl:px-0"  >
     <section class=" py-8 antialiased dark:bg-gray-900 md:py-16  ">
       <div class="mx-auto   px-4 2xl:px-0 ">
         <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl ">Resumen cotizacion</h2>
@@ -174,9 +174,7 @@
          
 
 
-
-          
-          <div class="mx-auto  w-full  ">
+          <div class="mx-auto  w-full" id="element-to-print"  >
             <div class="space-y-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6">
               <p class="text-xl font-semibold text-gray-900 dark:text-white">Lista detallada</p>
 
@@ -227,19 +225,27 @@
       </div>
     </section>
   </div>
+
+  <button class="w-64 h-12 px-4 py-2 bg-red-500" @click="savepdf" >GUARDAR</button>
 </div>
 </template>
 
 
 <script setup>
-
+import html2pdf from 'html2pdf.js'
 
 const cartST=useCartStore()
 
 
 
 
+function savepdf(){
+  html2pdf(document.getElementById('element-to-print')),{
+    margin:1,
+    filename:'i-was-html.pdf'
+  }
 
+}
 
 
 </script>

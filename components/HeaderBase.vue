@@ -170,10 +170,6 @@
                         </div>
                     </NuxtLink>
 
-
-
-
-
                 </div>
                 <!-- lista de opcione en dispositivo grandes start -->
             </nav>
@@ -281,9 +277,11 @@
                                             <div id="accordion-nested-collapse" data-accordion="collapse">
                                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-200 bg-white "
                                                     aria-labelledby="dropdownBottomButton">
-                                                    <li v-for="item in options">
-                                                        <a href="#"
-                                                            class="block text-lg  px-4 py-2 text-elecktranegro hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ item.text }}</a>
+                                                    <li v-for="item,i in options">
+                                                        <p href="#"
+                                                            @click="setSelectCateroriaM(i+1)"
+                                                            :class="`${toolST.selectvariant==i+1?'bg-elektraplomo':''}`"
+                                                            class="block text-lg  px-4 py-2 text-elecktranegro  dark:hover:bg-gray-600 dark:hover:text-white">{{ item.text }}</p>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -457,6 +455,13 @@ const goMarcas=() => {
 
 const goOfertas=() => {
     router.push({ path: "/ofertas" })
+    mobileMenuOpen.value=false
+}
+
+const toolST=useTools()
+const setSelectCateroriaM=(u)=>{
+    router.push({ path: "/productos" })
+    toolST.setselectvariant(u)
     mobileMenuOpen.value=false
 }
   

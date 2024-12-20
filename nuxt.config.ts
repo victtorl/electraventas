@@ -24,7 +24,10 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     'vue3-carousel-nuxt',
     'nuxt-swiper',
-    "dayjs-nuxt"
+    "dayjs-nuxt",
+  ],
+  plugins: [
+    { src: '@/plugins/vue-html2pdf', mode: 'client' }
   ],
   
 })

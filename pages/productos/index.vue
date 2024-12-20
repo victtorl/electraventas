@@ -36,19 +36,22 @@
             <!-- <a href="#">See All</a> -->
         </div>
 
-<div class="grid grid-cols-1  md:flex" >
+<div class="grid grid-cols-1  md:flex md:gap-x-4" >
         <div class="hidden lg:block" >
             <ul role="list" class="divide-y divide-gray-100">
-                <li v-for="item in options" :key="item.value" class="relative py-5 w-full md:w-64 hover:bg-elecktraamarillo">
+                <li v-for="item,i in options" :key="item.value" 
+                :class="`${i+1==toolST.selectvariant?'bg-elecktraamarillo':''}`"
+                @click="setSelectCategoria(i+1)"
+                class="relative py-5 w-full md:w-64 hover:bg-elecktraamarillo">
                     <div class="px-4 sm:px-6 lg:px-8">
                         <div class="mx-auto flex max-w-4xl justify-between gap-x-6">
                             <div class="flex min-w-0 gap-x-4">
                                 <div class="min-w-0 flex-auto">
                                     <p class="text-sm/6 font-semibold  text-gray-900">
-                                        <a :href="item.value">
+                                        <p>
                                             <span class="absolute inset-x-0  -top-px bottom-0" />
                                             {{ item.text }}
-                                        </a>
+                                        </p>
                                     </p>
                                 <ChevronRightIcon class="size-5 flex-none text-gray-400" aria-hidden="true" />
                                     
@@ -63,9 +66,8 @@
 
         <div class="grid  grid-cols-1 xs:grid-cols-2    md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  ">
             <!-- CARD 3 -->
-            <div v-for="item in proST.groupProducts"
+            <div v-for="item in proST.groupProducts.filter(u=>u.data.categoria==toolST.selectvariant)"
                 class="rounded overflow-hidden shadow-lg bg-white flex flex-col   ">
-
                 <ProductCart :codigo="item.data.codigo" :nombre="item.data.nombre" :marca="item.data.marca"
                     :oferta="item.data.oferta" :medida="item.data.medida" :imagen="item.data.imagenes[0]" :id="item.id"
                     :quantity="item.quantity" />
@@ -82,11 +84,19 @@ import { getAllProducts } from '~/firebase';
 
 
 const proST = useProductStore()
+
+
+
+
+const toolST=useTools()
+const setSelectCategoria=(u) => {
+    toolST.setselectvariant(u)
+}
+
 ///LLENAR LOS PRODUCTOS AL MONTAR EL COMPONENTE
 onMounted(() => {
     getAllProducts()
 })
-
 
 const people = [
     {
