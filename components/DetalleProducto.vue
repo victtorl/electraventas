@@ -58,9 +58,7 @@
             </svg>
             <span class="ml-2 text-gray-600">4.5 (120 reviews)</span>
           </div> -->
-          <p class="text-gray-700 mb-6">Experience premium sound quality and industry-leading noise cancellation
-            with
-            these wireless headphones. Perfect for music lovers and frequent travelers.</p>
+          <p class="text-gray-700 mb-6">{{ detailST.detailproduct.data.description }}</p>
   
           <div class="mb-6 flex flex-col lg:flex-row justify-between items-center">
             <div class=" bg-elecktraamarillo rounded-l-full p-2 w-72 flex justify-center items-center gap-x-4" >
