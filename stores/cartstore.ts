@@ -78,6 +78,11 @@ export const useCartStore = defineStore('cart', () => {
     saveItems();
   };
 
+  const clearCart=() => {
+    items.value=[]
+    saveItems()
+  }
+
   const saveItems = () => {
     localStorage.setItem('cartItemsElektra', JSON.stringify(items.value));
   };
@@ -91,6 +96,7 @@ export const useCartStore = defineStore('cart', () => {
     addItem,
     removeItem,
     updateQuantity,
-    addSeveralItems
+    addSeveralItems,
+    clearCart
   };
 });

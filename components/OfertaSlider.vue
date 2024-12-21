@@ -6,10 +6,7 @@
     <ClientOnly>
       <swiper-container ref="containerRef" :init="false">
         <swiper-slide v-for="(slide, idx) in proST.groupOfertas" :key="idx" style="height: auto;">
-
-
           <div class="rounded overflow-hidden flex  w-64 shadow-lg bg-white border-2 border-elektraplomo/50  flex-col ">
-           
             <ProductCart
             :codigo="slide.data.codigo"
             :nombre="slide.data.nombre"
@@ -22,10 +19,6 @@
             :quantity="slide.quantity"
             />
           </div>
-
-
-
-
         </swiper-slide>
       </swiper-container>
     </ClientOnly>

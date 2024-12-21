@@ -1,6 +1,5 @@
 <template>
     <header class="fixed   inset-x-0  top-0 z-50 font-manrope " :class="props.classHeaderBase">
-        <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
         <HeaderContact />
         <span class="flex w-full items-center justify-center bg-elecktranegro ">
             <nav class="flex items-center justify-between p-6 h-24  px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  "
@@ -114,10 +113,6 @@
                 </div>
                 <!-- buscador dispositivo grande end-->
 
-
-
-
-
                 <!-- lista de opcione en dispositivo grandes start -->
                 <div class="hidden  lg:flex lg:justify-end  justify-center items-center  lg:gap-x-4 ">
 
@@ -210,20 +205,12 @@
                                             data-accordion-target="#accordion-collapse-body-0" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-0">
                                             <span>Inicio</span>
-                                            <!-- <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg> -->
+                                       
                                         </button>
                                     </h2>
                                     <div id="accordion-collapse-body-0" class="hidden"
                                         aria-labelledby="accordion-collapse-heading-0">
-                                        <!-- <div
-                                            class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            hola
-                                        </div> -->
+                                      
                                     </div>
                                     <!-- inicio end -->
 
@@ -235,20 +222,11 @@
                                             data-accordion-target="#accordion-collapse-body-1" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-1">
                                             <span>Nosotros</span>
-                                            <!-- <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg> -->
+                                          
                                         </button>
                                     </h2>
                                     <div id="accordion-collapse-body-1" class="hidden"
                                         aria-labelledby="accordion-collapse-heading-1">
-                                        <!-- <div
-                                            class="p-5 border border-b-1 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            mundo
-                                        </div> -->
 
                                     </div>
                                     <!-- nosotros end -->
@@ -299,21 +277,10 @@
                                             data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-3">
                                             <span>Marcas</span>
-                                            <!-- <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg> -->
                                         </button>
                                     </h2>
                                     <div id="accordion-collapse-body-3" class="hidden"
                                         aria-labelledby="accordion-collapse-heading-3">
-                                        <!-- <div
-                                            class="p-5 border border-b-1 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            mundo
-                                        </div> -->
-
                                     </div>
                                     <!-- marcas end -->
 
@@ -326,20 +293,11 @@
                                             data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
                                             aria-controls="accordion-collapse-body-4">
                                             <span>Ofertas</span>
-                                            <!-- <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg> -->
+                            
                                         </button>
                                     </h2>
                                     <div id="accordion-collapse-body-4" class="hidden"
                                         aria-labelledby="accordion-collapse-heading-4">
-                                        <!-- <div
-                                            class="p-5 border border-b-1 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                            mundo
-                                        </div> -->
                                     </div>
                                     <!-- ofertas end -->
 
@@ -347,19 +305,6 @@
             
                                 </div>
 
-
-                           
-
-
-
-
-<!-- 
-                            <NuxtLink to="/contacto" @click="mobileMenuOpen=false">
-                                <button type="button"
-                                    class=" bg-elecktranegro text-white rounded-md mb-8 mt-4  px-8 lg:px-2 xl:px-4 py-2  text-lg font-bold lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                                    Contactanos
-                                </button>
-                            </NuxtLink> -->
 
                         </div>
 

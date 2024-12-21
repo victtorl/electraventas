@@ -237,16 +237,16 @@
           </div>
         </div>
 
-        <div class="w-fit max-w-[300px]">
-          <div class="max-w-[223px]">
+        <div class="w-fit max-w-[400px]">
+          <div class="max-w-[333px]">
             <h1 class="font-semibold text-white text-18">Dirección</h1>
-            <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white hover:underline transition-all duration-300 mt-3.5">
+            <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
                 Av. Parque Zonal 1183 - Carabayllo
               </span>
             </div>
             <h1 class="mt-6 font-semibold text-white text-18">Contacto</h1>
-            <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white hover:underline transition-all duration-300 mt-3.5">
+            <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
                 ventas.tec@tradingelectric.pe <br />
                 (511) 1 7020921
@@ -259,12 +259,7 @@
           <p class="transition-all duration-300 text-white/50 pt-3.5">
             No dude en enviarnos su consulta 
           </p>
-          <!-- <input
-            type="email"
-            placeholder="Correo electronico"
-            id="eFive"
-            class="bg-transparent border border-white/10 py-2.5 px-6 rounded-[28px] focus:outline-none w-full mt-5 text-white"
-          /> -->
+
           <NuxtLink to="/contacto">
             <div class="home-two-btn-bg w-64  rounded-2xl py-3.5 group   flex flex-row justify-center items-center bg-elecktraamarillo hover:bg-white text-black mt-2.5 before:bg-it-black after:bg-it-black">
               <span class="relative z-10 text-base font-semibold text-black transition-all duration-300 group-hover:text-elecktranegro font-inter">
