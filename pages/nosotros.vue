@@ -212,7 +212,7 @@ const valores=ref([
     description:'Cumplimos nuestros compromisos con dedicación y profesionalismo.'
   },
   {
-    title:'Trabajo en equipo:',
+    title:'Trabajo en equipo',
     description:'Logramos más unidos, valorando la colaboración y las ideas.'
   },
   {

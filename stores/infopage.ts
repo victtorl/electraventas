@@ -132,7 +132,6 @@ export const useProductStore=defineStore("products-store",() => {
       correo:string,
       direccion:string,
       facebook:string,
-      fechaoferta:string,
       fechaloferta:string
       instagram:string,
       telefono:string,

@@ -4,7 +4,7 @@
     <div class="w-full px-6 lg:px-16  font-manrope 3xl:w-maxdesk 3xl:px-0">
       <section class=" py-8 antialiased dark:bg-gray-900 md:py-16  ">
         <div class="mx-auto   px-4 2xl:px-0 ">
-          <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl ">Resumen cotizacion</h2>
+          <h2 class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl ">Resumen cotización</h2>
 
           <div class=" md:gap-6 lg:flex lg:items-start xl:gap-x-8 ">
 
