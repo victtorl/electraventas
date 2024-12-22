@@ -34,11 +34,14 @@
         <div>
             <LogoSliderFour/>
         </div>
-        <NuxtLink to="/contacto">
-            <button type="button"
-                class="border-[1.5px] my-4 px-4 rounded-lg border-white  bg-elecktranegro hover:bg-elecktraamarillo hover:text-black font-bold  hover:border-yellow-400 text-white  lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                Cotizar ahora
-            </button>
+
+
+        <NuxtLink to="/contacto" >
+                    <div class="home-two-btn-bgblack my-4 py-3.5 w-64 group bg-elecktraamarillo border-none   cursor-pointer">
+                    <span class="relative z-10 text-base  font-semibold text-elecktranegro transition-all duration-300 group-hover:text-white  font-inter">
+                        Cotizar ahora
+                    </span>
+                    </div>
         </NuxtLink>
 
       </div>

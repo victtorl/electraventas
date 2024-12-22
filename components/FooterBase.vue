@@ -261,12 +261,13 @@
           </p>
 
           <NuxtLink to="/contacto">
-            <div class="home-two-btn-bg w-64  rounded-2xl py-3.5 group   flex flex-row justify-center items-center bg-elecktraamarillo hover:bg-white text-black mt-2.5 before:bg-it-black after:bg-it-black">
+            <div class="home-two-btn-bg w-64  rounded-2xl py-3.5 group   flex flex-row justify-center items-center bg-elecktraamarillo hover:bg-white group-hover:bg-white text-black  mt-2.5 before:bg-elecktraamarillo after:bg-elecktraamarillo">
               <span class="relative z-10 text-base font-semibold text-black transition-all duration-300 group-hover:text-elecktranegro font-inter">
                 Contáctanos
               </span>
             </div>
           </NuxtLink>
+
         </div>
       </div>
       <div class="w-full h-[80px] md:h-[65px] bg-elecktraamarillo">

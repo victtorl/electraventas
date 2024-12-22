@@ -85,4 +85,8 @@
 <script setup>
 const infopST=useProductStore()
 
+onMounted(() => {
+  
+})
+
 </script>

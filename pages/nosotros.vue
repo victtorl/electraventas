@@ -58,7 +58,7 @@
         </h2>
         <div class="grid grid-cols-3 sm:grid-cols-6 lg:grid-cols-12 min-h-[303px] gap-[30px] mt-6 sm:mt-[70px]">
       
-          <div v-for="item in valores" class="col-span-3 flex items-center h-[246px] relative mb-6">
+          <div v-for="item in infopST.infopage.itemsvalores" class="col-span-3 flex items-center h-[246px] relative mb-6">
             <div class="group hover:absolute border border-elecktraamarillo px-[29px] py-[30px] rounded-2xl bg-black  -right-0 h-[246px] hover:h-[290px] transition-all duration-300 hover:bg-elecktraamarillo/5 overflow-hidden h5-story_slider_active_card">
               <div class="">
                 <svg
@@ -122,7 +122,6 @@
 
             </div>
           </div>
-         
         </div>
       </div>
     </section>
@@ -143,7 +142,7 @@
                 </h2>
               </div>
               <div class="w-full">
-                <div data-aos="fade-up" class="feature-item-h-4">
+                <div v-for=" item in infopST.infopage.itemsconfianza" data-aos="fade-up" class="feature-item-h-4">
                   <div class="feature-item-wrapper w-full px-5 py-5 md:px-[30px] md:py-[35px] flex flex-col sm:flex-row gap-5 sm:gap-10 items-start">
                     <div class="w-[30px]">
                      
@@ -151,72 +150,22 @@
 
                     <div class="flex-1">
                       <h3 class="mb-3 font-semibold leading-none text-white text-22">
-                       Calidad garantizada:
+                       {{item.title}}
                       </h3>
                       <p class="text-white opacity-50">
-                        Productos eléctricos confiables y duraderos que cumplen con los más altos estándares.
+                       {{ item.description }}
                       </p>
                     </div>
                   </div>
                 </div>
+                
                 <div
                   data-aos="fade-up"
                   data-aos-delay="100"
                   class="feature-item-h-4"
                 >
-                  <div class="feature-item-wrapper w-full px-5 py-5 md:px-[30px] md:py-[35px] flex flex-col sm:flex-row gap-5 sm:gap-10 items-start">
-                    <div class="w-[30px]">
-                     
-                    </div>
-                    <div class="flex-1">
-                      <h3 class="mb-3 font-semibold leading-none text-white text-22">
-                        Atención personalizada:
-                      </h3>
-                      <p class="text-white opacity-50">
-                        sesoramiento especializado adaptado a las necesidades de cada cliente.
-                      </p>
-                    </div>
-                  </div>
                 </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  class="feature-item-h-4"
-                >
-                  <div class="feature-item-wrapper w-full px-5 py-5 md:px-[30px] md:py-[35px] flex flex-col sm:flex-row gap-5 sm:gap-10 items-start">
-                    <div class="w-[30px]">
-                    </div>
-                    <div class="flex-1">
-                      <h3 class="mb-3 font-semibold leading-none text-white text-22">
-                        Atención a nivel nacional: 
-                      </h3>
-                      <p class="text-white opacity-50">
-                        Cobertura en todo el país para garantizar un servicio rápido y eficiente.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  class="feature-item-h-4"
-                >
-                  <div class="feature-item-wrapper w-full px-5 py-5 md:px-[30px] md:py-[35px] flex flex-col sm:flex-row gap-5 sm:gap-10 items-start">
-                    <div class="w-[30px]">
-                  
-                    </div>
-                    <div class="flex-1">
-                      <h3 class="mb-3 font-semibold leading-none text-white text-22">
-                        Precios competitivos:  
-                      </h3>
-                      <p class="text-white opacity-50">
-                        Ofrecemos las mejores soluciones eléctricas al precio más accesible del mercado.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
+               
               </div>
             </div>
             <div data-aos="fade-left" class="w-full">
@@ -250,6 +199,8 @@
 
 
 <script setup>
+
+const infopST=useProductStore()
 
 const valores=ref([
   {

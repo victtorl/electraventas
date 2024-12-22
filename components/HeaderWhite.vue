@@ -68,13 +68,15 @@
                 </NuxtLink>
                 <NuxtLink  to="/ofertas"
                     class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
-                    Oferta
+                    Ofertas
                 </NuxtLink>
-                <NuxtLink to="/contacto"  >
-                    <button type="button"
-                        class="border-[1.5px] rounded-lg border-primary bg-elecktranegro text-white hover:bg-elecktraamarillo hover:text-elecktranegro  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                        Contacto 
-                    </button>
+
+                <NuxtLink to="/contacto" >
+                    <div class="home-two-btn-bg py-3.5 group bg-elecktranegro border-elecktraamarillo w-fit  cursor-pointer">
+                    <span class="relative z-10 text-base lg:text-lg font-semibold text-white transition-all duration-300 group-hover:text-elecktranegro  font-inter">
+                        Contacto
+                    </span>
+                    </div>
                 </NuxtLink>
 
                 <NuxtLink to="/mycart" >

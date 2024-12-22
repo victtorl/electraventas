@@ -34,12 +34,19 @@
                     </p>
                 </div>
 
-                <NuxtLink to="/nosotros">
-                                <button type="button"
-                                    class="border-2 rounded-xl font-bold bg-elecktraamarillo text-elecktranegro hover:bg-elecktranegro hover:text-white  mt-8 px-2 lg:px-2 xl:px-6 py-3  text-base lg:text-sm xl:text-md   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
-                                    Ver todo sobre nosotros
-                                </button>
+
+
+                <NuxtLink to="/nosotros" >
+                    <div class="home-two-btn-bgblack py-2.5 w-fit group bg-elecktraamarillo border-none   cursor-pointer">
+                    <span class="relative z-10 text-base  font-semibold text-elecktranegro transition-all duration-300 group-hover:text-white  font-inter">
+                    
+                        Ver todo sobre nosotros
+                    </span>
+                    </div>
                 </NuxtLink>
+
+
+                
             </div>
         </div>
       </div>

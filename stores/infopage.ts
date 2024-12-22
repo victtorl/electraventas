@@ -137,10 +137,11 @@ export const useProductStore=defineStore("products-store",() => {
       instagram:string,
       telefono:string,
       urlyoutube:string
-    }
+    },
     mision:string,
     vision:string,
-    itemvalores:[Ichunk]
+    itemsvalores:[Ichunk],
+    itemsconfianza:[Ichunk]
   }
 /////////INFORMACION DE LA PAGINA
 const infopage = ref<Iinfopage>(JSON.parse(localStorage.getItem('infopage-elektra') as string) || {} as Iinfopage);

@@ -1712,3 +1712,10 @@ h6 {
 }
 
 
+.home-two-btn-bg {
+  @apply inline-flex justify-center gap-2 px-[30px]  rounded-[41px]  items-center border overflow-hidden  relative before:block before:w-[300px] before:h-[300px] before:absolute before:bg-white before:-top-[400px] before:rotate-45 hover:before:-top-[100px] transition-all duration-300 before:transition-all before:duration-1000 before:z-0 z-10 hover:text-blue-seo after:block after:w-[300px] after:h-[300px] after:absolute after:bg-white after:-bottom-[400px] after:rotate-45 hover:after:-bottom-[100px]  after:transition-all after:duration-1000 after:z-0;
+}
+
+.home-two-btn-bgblack {
+  @apply inline-flex justify-center gap-2 px-[30px]  rounded-[41px]  items-center border overflow-hidden  relative before:block before:w-[300px] before:h-[300px] before:absolute before:bg-black before:-top-[400px] before:rotate-45 hover:before:-top-[100px] transition-all duration-300 before:transition-all before:duration-1000 before:z-0 z-10 hover:text-blue-seo after:block after:w-[300px] after:h-[300px] after:absolute after:bg-black after:-bottom-[400px] after:rotate-45 hover:after:-bottom-[100px]  after:transition-all after:duration-1000 after:z-0;
+}

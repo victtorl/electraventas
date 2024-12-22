@@ -43,12 +43,20 @@
           </div>
 
 
-          <NuxtLink target="_blank" to="https://heyzine.com/flip-book/60e742ff40.html" >
+          <!-- <NuxtLink target="_blank" to="https://heyzine.com/flip-book/60e742ff40.html" >
                     <button type="button"   
                         class=" hover:bg-elecktranegro px-4 hover:text-white font-bold translate-y-8 mt-6 bg-elecktraamarillo text-main-black rounded-lg    lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl   text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Revisa nuestro catálogo
                     </button>
-          </NuxtLink>
+          </NuxtLink> -->
+
+          <NuxtLink target="_blank" to="https://heyzine.com/flip-book/60e742ff40.html" >
+                    <div class="home-two-btn-bgblack my-4 py-3.5 w-fit group bg-elecktraamarillo border-none   cursor-pointer">
+                    <span class="relative z-10 text-base lg:text-sm xl:text-xl font-semibold text-elecktranegro transition-all duration-300 group-hover:text-white  font-inter">
+                      Revisa nuestro catálogo
+                    </span>
+                    </div>
+        </NuxtLink>
 
         </div>
 
