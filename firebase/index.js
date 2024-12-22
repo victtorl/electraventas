@@ -83,5 +83,19 @@ export const getAllProducts = async () => {
 }
 
 
+//TRAER TODA LA INFORMACION DEL CONTENIDO 
+export const getAllContentHome = async () => {
+  const infoPageST = useProductStore()
+  infoPageST.limpiarInfopage()//limpia previa
+  const querySnapshot = await getDocs(collection(db, "elektra-web-contenido"));
+  querySnapshot.forEach((doc) => {
+      // prodST.llenarProductos({ id: doc.id, data: doc.data() })
+      infoPageST.llenarInfopage(doc.data())
+      //  console.log(doc.data());
+  });
+}
+
+
+
 
 

@@ -70,7 +70,7 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Oferta
                 </NuxtLink>
-                <NuxtLink to="/contacto"  target="_blank">
+                <NuxtLink to="/contacto"  >
                     <button type="button"
                         class="border-[1.5px] rounded-lg border-primary bg-elecktranegro text-white hover:bg-elecktraamarillo hover:text-elecktranegro  px-0 lg:px-2 xl:px-4  py-2 text-base lg:text-sm xl:text-xl font-normal  text-blackgio shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition ease-in-out delay-50 hover:bg-verdeoscuro ">
                         Contacto 

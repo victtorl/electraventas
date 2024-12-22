@@ -13,10 +13,10 @@
 
           <div class="flex gap-[15px]">
             <a
-              href="#"
+              :href="infopST.infopage.contacto.facebook"
               aria-label="facebook"
               target="blank"
-              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-it-blue before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
+              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
             >
               <span class="relative z-10">
                 <svg
@@ -33,11 +33,11 @@
                 </svg>
               </span>
             </a>
-            <a
+            <!-- <a
               href="#"
               aria-label="twitter"
               target="blank"
-              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-it-blue before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
+              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
             >
               <span class="relative z-10">
                 <svg
@@ -53,12 +53,12 @@
                   />
                 </svg>
               </span>
-            </a>
+            </a> -->
             <a
-              href="#"
+              :href="infopST.infopage.contacto.instagram"
               target="blank"
               aria-label="instagram"
-              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-it-blue before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
+              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
             >
               <span class="relative z-10">
                 <svg
@@ -77,11 +77,11 @@
                 </svg>
               </span>
             </a>
-            <a
+            <!-- <a
               href="#"
               aria-label="dribble"
               target="blank"
-              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-it-blue before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
+              class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
             >
               <span class="relative z-10">
                 <svg
@@ -99,7 +99,7 @@
                   />
                 </svg>
               </span>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="w-fit max-w-[300px]">
@@ -242,14 +242,14 @@
             <h1 class="font-semibold text-white text-18">Dirección</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                Av. Parque Zonal 1183 - Carabayllo
+                {{ infopST.infopage.contacto.direccion }}
               </span>
             </div>
             <h1 class="mt-6 font-semibold text-white text-18">Contacto</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                ventas.tec@tradingelectric.pe <br />
-                (511) 1 7020921
+                {{ infopST.infopage.contacto.correo }} <br />
+                {{ infopST.infopage.contacto.telefono }}
               </span>
             </div>
           </div>
@@ -324,3 +324,8 @@
     </footer>
 
 </template>
+
+<script setup>
+const infopST=useProductStore()
+
+</script>

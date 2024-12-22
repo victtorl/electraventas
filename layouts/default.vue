@@ -23,6 +23,7 @@
 <script setup lang="ts" >
 
 import { useWindowScroll } from "@vueuse/core";
+import { getAllContentHome } from "~/firebase";
 
 const { width, height } = useWindowSize();
 const { x, y } = useWindowScroll({ behavior: "smooth" });
@@ -58,6 +59,7 @@ watch(
 
 onMounted(() => {
   selectStyleOnLoad();
+  getAllContentHome()
 });
 
 

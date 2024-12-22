@@ -122,6 +122,43 @@ export const useProductStore=defineStore("products-store",() => {
     
   }
 
+  interface Ichunk{
+    title:string,
+    description:string
+  }
+
+  interface Iinfopage{
+    contacto:{
+      correo:string,
+      direccion:string,
+      facebook:string,
+      fechaoferta:string,
+      fechaloferta:string
+      instagram:string,
+      telefono:string,
+      urlyoutube:string
+    }
+    mision:string,
+    vision:string,
+    itemvalores:[Ichunk]
+  }
+/////////INFORMACION DE LA PAGINA
+const infopage = ref<Iinfopage>(JSON.parse(localStorage.getItem('infopage-elektra') as string) || {} as Iinfopage);
+
+
+function llenarInfopage(itm:Iinfopage){
+    infopage.value = itm   
+      watch(infopage, (newValue) => {
+        localStorage.setItem('infopage-elektra', JSON.stringify(newValue));
+      }, { deep: true });
+}
+
+function limpiarInfopage(){
+    infopage.value= {} as Iinfopage
+}
+
+  
+
 
   return {
         productstore,
@@ -146,6 +183,9 @@ export const useProductStore=defineStore("products-store",() => {
 
         filterOfertxMarca,
 
+        infopage,
+        limpiarInfopage,
+        llenarInfopage
 
   }
   
