@@ -121,38 +121,10 @@ function dirigiraArticulos() {
 
 
 
-
-
-
 const props = defineProps({
     classHeaderWhite:String
 })
 
-const itemsbusqsugest = [
-    [{
-        slot: 'getting-started'
-    }]
-]
-
-const buscarpalabra=ref('')
-watch(
-  () => buscarpalabra.value,
-  (newRoute) => {
-    // getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
-    
-  }
-)
-const open = ref(false)
-function gestionApertura(){
-    open.value=true
-}
-async function mostrarResultados(){
-    const searchST=useSearchStore()
-    searchST.setword(buscarpalabra.value)
-    getProductsFilterSearchutils(buscarpalabra.value,nuxtApp.$config.public.keyCPlanta,1,12)
-     await navigateTo(`/search/?query=${searchST.word}`)
-     open.value=false
-}
 
 
 </script>
