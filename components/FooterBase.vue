@@ -102,13 +102,13 @@
             </a> -->
           </div>
         </div>
-        <div class="w-fit max-w-[300px]">
+        <div class="w-fit max-w-[250px]">
           <div class="flex flex-col items-center">
             <div>
-              <h1 class="font-semibold text-white text-18">Services</h1>
+              <h1 class="font-semibold text-white text-18">Productos</h1>
               <ul class="mt-3.5">
-                <li class="">
-                  <NuxtLink to="/">
+                <li class="" v-for="(item,i) in options" >
+                  <a @click="setSelectCateroriaF(i+1)" class="cursor-pointer" >
                     <div class="relative flex items-center gap-2 pr-5 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
                       <svg
                         class="absolute transition-all duration-300 -left-2 group-hover:left-0"
@@ -127,117 +127,19 @@
                         />
                       </svg>
                       <span class="transition-all duration-300 group-hover:translate-x-4">
-                        Keyword Research
+                        {{ item.text }}
                       </span>
                     </div>
-                  </NuxtLink>
-                </li>
-                <li class="">
-                  <NuxtLink to="/">
-                    <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
-                      <svg
-                        class="absolute transition-all duration-300 -left-2 group-hover:left-0"
-                        width="6"
-                        height="12"
-                        viewBox="0 0 6 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1L5 6L1 11"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span class="transition-all duration-300 group-hover:translate-x-4">
-                        Email marketing
-                      </span>
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="">
-                  <NuxtLink to="/">
-                    <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
-                      <svg
-                        class="absolute transition-all duration-300 -left-2 group-hover:left-0"
-                        width="6"
-                        height="12"
-                        viewBox="0 0 6 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1L5 6L1 11"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span class="transition-all duration-300 group-hover:translate-x-4">
-                        Content marketing
-                      </span>
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="">
-                  <NuxtLink to="/">
-                    <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
-                      <svg
-                        class="absolute transition-all duration-300 -left-2 group-hover:left-0"
-                        width="6"
-                        height="12"
-                        viewBox="0 0 6 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1L5 6L1 11"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span class="transition-all duration-300 group-hover:translate-x-4">
-                        Web Development
-                      </span>
-                    </div>
-                  </NuxtLink>
-                </li>
-                <li class="">
-                  <NuxtLink to="/">
-                    <div class="relative flex items-center gap-2 overflow-hidden font-medium transition-all duration-300 group text-white/50 hover:text-white hover:underline">
-                      <svg
-                        class="absolute transition-all duration-300 -left-2 group-hover:left-0"
-                        width="6"
-                        height="12"
-                        viewBox="0 0 6 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M1 1L5 6L1 11"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span class="transition-all duration-300 group-hover:translate-x-4">
-                        Social Marketing
-                      </span>
-                    </div>
-                  </NuxtLink>
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="w-fit max-w-[400px]">
+      
+
+        <div class="w-fit max-w-[300px]">
           <div class="max-w-[333px]">
             <h1 class="font-semibold text-white text-18">Dirección</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
@@ -245,10 +147,15 @@
                 {{ infopST.infopage.contacto.direccion }}
               </span>
             </div>
-            <h1 class="mt-6 font-semibold text-white text-18">Contacto</h1>
+            <h1 class="mt-6 font-semibold text-white text-18">Correo</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                {{ infopST.infopage.contacto.correo }} <br />
+                {{ infopST.infopage.contacto.correo }} 
+              </span>
+            </div>
+            <h1 class="mt-6 font-semibold text-white text-18">Telefono</h1>
+            <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
+              <span class="transition-all duration-300">
                 {{ infopST.infopage.contacto.telefono }}
               </span>
             </div>
@@ -328,5 +235,27 @@
 
 <script setup>
 const infopST=useProductStore()
+const router=useRouter()
+
+const options = ref([
+      { text: 'Herramientas para terminales y cables', value: 1 },
+      { text: 'Mangas termocontraibles ', value: 2 },
+      { text: 'Terminales de compresión', value: 3 },
+      { text: 'Terminales sobremoldeados', value: 3 },
+      { text: 'Cintillos y Espirales', value: 4 },
+      { text: 'Enchufes y Tomas Industriales', value: 5 },
+      { text: 'Térmicos', value: 6 },
+      { text: 'Productos Rittal', value: 7 },
+      { text: 'Phoenix Contact', value: 8 },
+      { text: 'Canaletas y Riel Din ranuradas', value: 9 },
+      { text: 'Cables', value: 10 },
+      { text: 'Otros', value: 11 },
+])
+
+const toolST=useTools()
+const setSelectCateroriaF=(u)=>{
+    router.push({ path: "/productos" })
+    toolST.setselectvariant(u)
+}
 
 </script>
