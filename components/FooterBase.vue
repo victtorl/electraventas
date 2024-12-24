@@ -13,7 +13,7 @@
 
           <div class="flex gap-[15px]">
             <a
-              :href="infopST.infopage.contacto.facebook"
+              :href="contact.facebook"
               aria-label="facebook"
               target="blank"
               class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
@@ -55,7 +55,7 @@
               </span>
             </a> -->
             <a
-              :href="infopST.infopage.contacto.instagram"
+              :href="contact.instagram"
               target="blank"
               aria-label="instagram"
               class="w-[46px] h-[46px] rounded-full flex justify-center items-center border border-white/10 overflow-hidden relative before:inline-block before:absolute before:z-0 before:w-full before:h-full before:bg-elecktraamarillo before:scale-x-0 group hover:before:scale-x-100 before:origin-right hover:before:origin-left before:transition-transform before:ease-out before:duration-300"
@@ -144,19 +144,19 @@
             <h1 class="font-semibold text-white text-18">Dirección</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                {{ infopST.infopage.contacto.direccion }}
+                {{ contact.address }}
               </span>
             </div>
             <h1 class="mt-6 font-semibold text-white text-18">Correo</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                {{ infopST.infopage.contacto.correo }} 
+                {{ contact.email }} 
               </span>
             </div>
             <h1 class="mt-6 font-semibold text-white text-18">Telefono</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">
               <span class="transition-all duration-300">
-                {{ infopST.infopage.contacto.telefono }}
+                {{ contact.phone }}
               </span>
             </div>
           </div>
@@ -237,6 +237,15 @@
 const infopST=useProductStore()
 const router=useRouter()
 
+const contact=reactive({
+  phone:infopST.infopage.contacto.telefono,
+  email:infopST.infopage.contacto.correo,
+  address:infopST.infopage.contacto.direccion,
+  facebook:infopST.infopage.contacto.facebook,
+  instagram:infopST.infopage.contacto.instagram
+
+})
+
 const options = ref([
       { text: 'Herramientas para terminales y cables', value: 1 },
       { text: 'Mangas termocontraibles ', value: 2 },
@@ -257,5 +266,9 @@ const setSelectCateroriaF=(u)=>{
     router.push({ path: "/productos" })
     toolST.setselectvariant(u)
 }
+
+
+
+
 
 </script>
