@@ -19,13 +19,13 @@
         <span class="flex flex-col justify-center items-center gap-x-2">
             <!-- <span class="w-16 h-1 border-2 border-blue-600"></span> -->
             <!-- <p class=" text-[32px] ">Nuestros clientes confian en nosotros</p> -->
-            <p class="text-lg font-bold font-inter">Venta de Materiales Eléctricos por Mayor y por Menor</p>
+            <p class="text-lg font-bold font-inter text-elecktranegro/80">Venta de Materiales Eléctricos por Mayor y por Menor</p>
 
             <div class="flex justify-center gap-x-2 items-center" >
                 <div class="w-6 h-6">
                     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M8 6L8 2L10 2L16 8L10 14L8 14L8 10L-1.74845e-07 10L-3.01991e-07 6L8 6Z" fill="#000000"></path> </g></svg>
                 </div>
-                <p class="text-sm font-semibold py-6 font-inter"> Haz clic en la marca de tu preferencia para mostrarte todos los productos.</p>
+                <p class="text-sm font-semibold py-6 font-inter text-elecktranegro/80"> Haz clic en la marca de tu preferencia para mostrarte todos los productos.</p>
             </div>
         </span>
         <!-- <h4 class="text-sm sm:text-base lg:text-2xl xl:text-3xl xl:leading-8 pt-4 font-bold text-black " >Nuestros clientes C&C</h4>

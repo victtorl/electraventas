@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center w-full text-pretty bg-elektraplomo/20 font-manrope  text-md " id="#nosotros" >
+    <div class="flex justify-center w-full text-pretty bg-elektraplomo/20 font-inter  text-md " id="#nosotros" >
       <div class="px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  flex justify-between ">
         <div class="flex flex-col lg:flex-row  w-full ">
             <div class="  lg:w-[50%]  " >
@@ -9,11 +9,11 @@
             <div class=" flex flex-col justify-center" >
 
                 <div class="flex items-center  gap-x-2" >
-                    <span class="w-16   border-t-4 border-elecktranegro" ></span>
+                    <span class="hidden lg:flex w-16   border-t-4 border-elecktranegro" ></span>
                     <p v-motion-pop-visible class="text-xl pt-2 sm:text-3xl font-bold"> Sobre Trading Electric C & C</p>
                 </div>
                 <h4 class="text-sm sm:text-base lg:text-2xl xl:text-3xl xl:leading-8 pt-4 font-bold text-elecktranegro " >¿Quiénes somos?</h4>
-                <p  class=" text-sm sm:text-base lg:text-[16px] lg:w-[560px] py-4" >
+                <p  class=" text-sm sm:text-base lg:text-[16px] lg:w-[560px] py-4 text-elecktranegro/80" >
                     Somos una empresa que nace bajo la dirección de los socios 
                     fundadores, que, a partir de trabajos por más de 13 años en
                      distintos proyectos eléctricos con C & C Electroingenieria S.A.C. 
@@ -24,7 +24,7 @@
 
                 <div class="border-l-2 border-elecktranegro">
                     <p
-                     class="p-6 text-sm sm:text-base lg:text-[16px] lg:w-[560px]"   
+                     class="p-6 text-sm sm:text-base lg:text-[16px] lg:w-[560px] text-elecktranegro/80"   
                     >
                     Sabemos que la prontitud de respuestas es fundamental para nuestros clientes; 
                     es por eso que, pensando en ellos, nace Trading Electric C & C S.A.C., una empresa proveedora 
@@ -52,3 +52,5 @@
       </div>
     </div>
 </template>
+
+

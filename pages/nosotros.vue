@@ -14,8 +14,8 @@
               <h1 class="pt-5 font-semibold text-24 sm:text-48 text-main-black">
                 Misión
               </h1>
-              <p class="pt-5 text-elecktranegro sm:pt-10">
-                Ofrecer suministros eléctricos de alta calidad a los distintos sectores industriales a nivel nacional, buscando mejores soluciones para satisfacer las necesidades de nuestros clientes.
+              <p class="pt-5  sm:pt-10 text-black/80 font-inter">
+               {{infoPage.vision}}
               </p>
              </div>
 
@@ -29,8 +29,8 @@
               <h1 class="pt-5 font-semibold text-24 sm:text-48 text-main-black">
                 Visión
               </h1>
-              <p class="pt-5 text-elecktranegro sm:pt-10">
-                Posicionarnos como una empresa proveedora de suministros eléctricos a nivel nacional.
+              <p class="pt-5  sm:pt-10 text-black/80 font-inter">
+                {{infoPage.vision}}
               </p>
              </div>
   
@@ -220,5 +220,20 @@ const valores=ref([
     description:'Actuamos con integridad, manteniendo siempre la verdad como principio.'
   },
 ])
+
+
+const infoPage=ref({
+  mision:'',
+  vision:'',
+})
+watchEffect(() => {
+  if(infopST.infopage){
+    infoPage.value.mision=infopST.infopage.mision
+    infoPage.value.vision=infopST.infopage.vision
+
+  }else{
+    console.log('cargando contenido');
+  }
+})
 
 </script>
