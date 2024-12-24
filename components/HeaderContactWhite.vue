@@ -7,13 +7,13 @@
                 <path d="M10.5 18.75C10.0858 18.75 9.75 19.0858 9.75 19.5C9.75 19.9142 10.0858 20.25 10.5 20.25H13.5C13.9142 20.25 14.25 19.9142 14.25 19.5C14.25 19.0858 13.9142 18.75 13.5 18.75H10.5Z" fill="#FFFFFF"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.625 0.75C6.76104 0.75 5.25 2.26104 5.25 4.125V19.875C5.25 21.739 6.76104 23.25 8.625 23.25H15.375C17.239 23.25 18.75 21.739 18.75 19.875V4.125C18.75 2.26104 17.239 0.75 15.375 0.75H8.625ZM7.5 4.125C7.5 3.50368 8.00368 3 8.625 3H9.75V3.375C9.75 3.99632 10.2537 4.5 10.875 4.5H13.125C13.7463 4.5 14.25 3.99632 14.25 3.375V3H15.375C15.9963 3 16.5 3.50368 16.5 4.125V19.875C16.5 20.4963 15.9963 21 15.375 21H8.625C8.00368 21 7.5 20.4963 7.5 19.875V4.125Z" fill="#FFFFFF"/>
                 </svg>
-                <h4 class="w-36 md:w-auto " >{{ contact.phone }}</h4>
+                <h4 class="w-36 md:w-auto font-manrope text-elektraplomo text-[15px] " >{{ contact.phone }}</h4>
             </li>
             <li class="flex flex-col lg:flex-row items-center gap-x-1  gap-y-2 h-16 md:h-auto" >
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M21.75 6.75232V17.2523C21.75 18.495 20.7426 19.5023 19.5 19.5023H4.5C3.25736 19.5023 2.25 18.495 2.25 17.2523V6.75232M21.75 6.75232C21.75 5.50968 20.7426 4.50232 19.5 4.50232H4.5C3.25736 4.50232 2.25 5.50968 2.25 6.75232M21.75 6.75232V6.99503C21.75 7.77637 21.3447 8.50176 20.6792 8.91126L13.1792 13.5266C12.4561 13.9717 11.5439 13.9717 10.8208 13.5266L3.32078 8.91126C2.65535 8.50177 2.25 7.77637 2.25 6.99503V6.75232" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <h4 class="w-36 md:w-auto" >{{ contact.email }}</h4>
+                <h4 class="w-36 md:w-auto font-manrope text-elektraplomo text-[15px] " >{{ contact.email }}</h4>
             </li>
 
             <li class="flex flex-col lg:flex-row items-center gap-x-1  gap-y-2 h-16 md:h-auto" >
@@ -21,7 +21,7 @@
                 <path d="M15 10.5116C15 12.1685 13.6569 13.5116 12 13.5116C10.3431 13.5116 9 12.1685 9 10.5116C9 8.85474 10.3431 7.5116 12 7.5116C13.6569 7.5116 15 8.85474 15 10.5116Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M19.5 10.5116C19.5 17.6537 12 21.7616 12 21.7616C12 21.7616 4.5 17.6537 4.5 10.5116C4.5 6.36946 7.85786 3.0116 12 3.0116C16.1421 3.0116 19.5 6.36946 19.5 10.5116Z" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <h4 class="w-36 md:w-auto" >{{ contact.address }}</h4>
+                <h4 class="w-36 md:w-auto font-manrope text-elektraplomo text-[15px] " >{{ contact.address }}</h4>
             </li>
         </ul>
 
