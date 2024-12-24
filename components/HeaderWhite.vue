@@ -1,6 +1,6 @@
 <template>
     <header class="hidden lg:block fixed inset-x-0  top-0 z-40 bg-elecktraamarillo  " :class="props.classHeaderWhite">
-        <!-- <button class="w-64 h-10 bg-red-500" @click="getSignals">hola como estas</button> -->
+
         <HeaderContactWhite/>
         <span class="w-full flex justify-center items-center" >
          <nav class="flex items-center justify-between p-6 h-24   px-auto px-6 lg:px-16 py-4 w-full 3xl:w-maxdesk 3xl:px-0  " aria-label="Global">

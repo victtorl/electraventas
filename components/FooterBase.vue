@@ -237,14 +237,27 @@
 const infopST=useProductStore()
 const router=useRouter()
 
-const contact=reactive({
-  phone:infopST.infopage.contacto.telefono,
-  email:infopST.infopage.contacto.correo,
-  address:infopST.infopage.contacto.direccion,
-  facebook:infopST.infopage.contacto.facebook,
-  instagram:infopST.infopage.contacto.instagram
+
+const contact=ref({
+  phone:'',
+  email:'',
+  address:'',
+  facebook:'',
+  instagram:''
 
 })
+watchEffect(() => {
+  if(infopST.infopage.contacto){
+    contact.value.phone=infopST.infopage.contacto.telefono
+    contact.value.email=infopST.infopage.contacto.correo
+    contact.value.address=infopST.infopage.contacto.direccion
+    contact.value.facebook=infopST.infopage.contacto.facebook
+    contact.value.instagram=infopST.infopage.contacto.instagram
+  }else{
+    console.log('cargando contenido');
+  }
+})
+
 
 const options = ref([
       { text: 'Herramientas para terminales y cables', value: 1 },
