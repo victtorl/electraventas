@@ -1,0 +1,1 @@
+import{ac as l,r as c,l as i}from"./BYYVRIDN.js";const s=l("detailproduct",()=>{const t=c(JSON.parse(localStorage.getItem("detailProduct-elektra"))||{});function e(r){t.value=r,i(t,o=>{localStorage.setItem("detailProduct-elektra",JSON.stringify(o))},{deep:!0})}function a(){t.value={}}return{detailproduct:t,limpiarDatos:a,llenarDatos:e}});export{s as u};

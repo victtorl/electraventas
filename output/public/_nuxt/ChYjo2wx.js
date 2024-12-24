@@ -1,1 +1,0 @@
-import{ae as l,r as i,k as u}from"./DadJ2JtW.js";const s=l("detailproduct",()=>{const t=i(JSON.parse(localStorage.getItem("detailProduct-elektra"))||{});function e(r){t.value=r,u(t,o=>{localStorage.setItem("detailProduct-elektra",JSON.stringify(o))},{deep:!0})}function a(){t.value={}}return{detailproduct:t,limpiarDatos:a,llenarDatos:e}});export{s as u};

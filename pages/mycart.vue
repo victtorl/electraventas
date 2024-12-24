@@ -129,8 +129,8 @@
 
   </div>
 
-  <button class="w-64 h-12 px-4 py-2 bg-red-500" @click="savepdf">opcion PDF</button>
-  <button class="w-64 h-12 px-4 py-2 bg-green-dark" @click="sendToWhatsApp">Opcion Wsp</button>
+  <!-- <button class="w-64 h-12 px-4 py-2 bg-red-500" @click="savepdf">opcion PDF</button> -->
+  <!-- <button class="w-64 h-12 px-4 py-2 bg-green-dark" @click="sendToWhatsApp">Opcion Wsp</button> -->
   <div class="w-full  flex justify-end pb-8">
     <div class="w-full px-6 lg:px-16  flex justify-center font-manrope 3xl:w-maxdesk 3xl:px-0" v-if="cartST.totalItems>0" >
       <div @click="abrirModal"
@@ -301,9 +301,9 @@ const stateform=reactive({
 
 
 
-      let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre} ${stateform.apellido}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n*Nombre   Codigo   Catidad*\n `;
+      let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre} ${stateform.apellido}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n`;
       cartST.items.forEach(item => {
-        message += `${item.nombre}                                ${item.codigo}   ${item.quantity}\n`;
+        message += `${item.nombre} || ${item.codigo} ||  X${item.quantity}\n`;
       });
       message += `\n*Total productos: ${cartST.totalItems}*`;
 
