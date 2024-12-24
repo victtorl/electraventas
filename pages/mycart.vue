@@ -200,21 +200,24 @@
                       <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nombres</label>
                       <div class="mt-2.5">
                         <input type="text" name="first-name" id="first-name" autocomplete="given-name" required v-model="stateform.nombre"
-                          class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
-                      </div>
+                          :class="{ 'border-red-500 border-2': v$.nombre.$errors.length }"
+                          class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6"/>
+                        </div>
                     </div>
                     <div>
                       <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Apellidos</label>
                       <div class="mt-2.5">
                         <input type="text" name="last-name" id="last-name" autocomplete="family-name" required v-model="stateform.apellido"
+                        :class="{ 'border-red-500 border-2': v$.apellido.$errors.length }"
                           class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
-                      </div>
+                        </div>
                     </div>
  
                     <div class="sm:col-span-2">
                       <label for="email" class="block text-sm/6 font-semibold text-gray-900">Correo</label>
                       <div class="mt-2.5">
                         <input type="email" name="email" id="email" autocomplete="email" required  v-model="stateform.email"
+                        :class="{ 'border-red-500 border-2': v$.email.$errors.length }"
                           class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
                       </div>
                     </div>
@@ -223,6 +226,7 @@
                       <div class="relative mt-2.5">
 
                         <input type="tel" name="phone-number" id="phone-number" autocomplete="tel" required v-model="stateform.telefono"
+                        :class="{ 'border-red-500 border-2': v$.telefono.$errors.length }"
                           class="block w-full rounded-md border-0 px-3.5 py-2 pl-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
                       </div>
                     </div>
@@ -255,6 +259,8 @@
 <script setup>
 import { FwbButton, FwbModal } from 'flowbite-vue'
 import html2pdf from 'html2pdf.js'
+import { useVuelidate } from '@vuelidate/core'
+import { required,helpers,email } from '@vuelidate/validators'
 
 const cartST=useCartStore()
 
@@ -291,10 +297,36 @@ const stateform=reactive({
   telefono:''
 })
 
+const rules = computed(() => {
+    return {
+        nombre: {
+            required: helpers.withMessage('Este campo es requerido', required),
+            // $autoDirty: true ,
+        },
+        apellido: {
+            required: helpers.withMessage('Este campo es requerido', required),
+            // $autoDirty: true ,
+        },
+        email: {
+            required: helpers.withMessage('Ingrese un correo', required),
+             email: helpers.withMessage('Ingrese un correo válido', email),
+            // $autoDirty: true ,
+        },
+        telefono: {
+            required: helpers.withMessage('Ingrese una contraseña', required),
+            // $autoDirty: true ,
+        },
+    }
+})
+
+const v$ = useVuelidate(rules, stateform);
+
 
 //SEND DETAIL CARRITO
    const sendToWhatsApp=()=> {
-
+    v$.value.$touch();
+    if (!v$.value.$error) {
+    const cartST=useCartStore()
       let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre} ${stateform.apellido}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n`;
       cartST.items.forEach(item => {
         message += `${item.nombre} || ${item.codigo} ||  X${item.quantity}\n`;
@@ -308,6 +340,7 @@ const stateform=reactive({
       cartST.clearCart()
       window.open(whatsappUrl, "_blank");
     }
+   }
   
 
 
