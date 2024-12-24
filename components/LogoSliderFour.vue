@@ -20,10 +20,10 @@
                   :key="idx"
                   style="height: auto;"
                 >
-                  <div>
+                  <div @click="filterProdsbyMarc(slide.name)">
                   <img
                     :src="slide.img"
-                    alt="" class=" w-[173px] h-[83px]"
+                    alt="" class=" w-auto lg:w-[173px] lg:h-[83px]"
                   />
                 </div>
                 </swiper-slide>
@@ -49,18 +49,6 @@ import img8 from '~/assets/landing-imgs/logos-marcas/SBS.jpg'
 import img9 from '~/assets/landing-imgs/logos-marcas/STARKER.png'
 import img10 from '~/assets/landing-imgs/logos-marcas/Schneider-electric.png'
 import img11 from '~/assets/landing-imgs/logos-marcas/WOER.jpg'
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const containerRef = ref(null)
@@ -102,41 +90,60 @@ onMounted(() => {
 
 
 const slides=ref([
-  {
-    img:img1
-  },
-  {
-    img:img2
-  },
-  {
-    img:img3
-  },
-  {
-    img:img4
-  },
-  {
-    img:img5
-  },
-  {
-    img:img6
-  },
-  {
-    img:img7
-  },
-  {
-    img:img8
-  },
-  {
-    img:img9
-  },
-  {
-    img:img10
-  },
-  {
-    img:img11
-  },
+{
+        img:img1,
+        name:'ABB'
+    },
+    {
+        img:img2,
+        name:'Bals'
+    },
+    {
+        img:img3,
+        name:'Hont'
+    },
+    {
+        img:img4,
+        name:'Indeco'
+    },
+    {
+        img:img5,
+        name:'Siemens'
+    },
+    {
+        img:img6,
+        name:'Phoenix'
+    },
+    {
+        img:img7,
+        name:'Rittal'
+    },
+    {
+        img:img8,
+        name:'Plastic'
+    },
+    {
+        img:img9,
+        name:'Starker'
+    },
+    {
+        img:img10,
+        name:'Schein'
+    },
+    {
+        img:img11,
+        name:'Woer'
+    },
 
 ])
+
+
+const router=useRouter()
+const prodST=useProductStore()
+const filterProdsbyMarc=(name:any) => {
+  prodST.filterOfertxMarca(name)
+  router.push(`/marcas/${name}`)
+}
 
 
 </script>
