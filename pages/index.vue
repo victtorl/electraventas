@@ -105,6 +105,9 @@
 const mainbanner=ref(false)
 import gatobaila from "~/assets/videos/corporativo.mp4"
 
+useHead({
+  title: "tradingelectric"
+})
 
 </script>
 
