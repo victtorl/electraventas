@@ -168,18 +168,14 @@
 
             <div class="w-full h-auto flex flex-col justify-start bg-white items-center py-0 md:py-4 md:pt-6 relative">
 
-              <div class="absolute -top-8 right-0 md:-top-4 md:-right-8 cursor-pointer hover:bg-white hover:rounded-lg "
+              <div class="absolute -top-0 right-0 md:-top-0 md:-right-0 cursor-pointer hover:bg-elecktraamarillo z-20 hover:rounded-lg"
                 @click="cerrarModal">
 
-                <div class="w-8 h-8 ">
-                  <svg width="full" height="full" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M1.78033 0.22199C1.48744 -0.0709041 1.01256 -0.0709041 0.71967 0.22199C0.426777 0.514883 0.426777 0.989757 0.71967 1.28265L2.43934 3.00232L0.71967 4.72199C0.426777 5.01488 0.426777 5.48976 0.71967 5.78265C1.01256 6.07554 1.48744 6.07554 1.78033 5.78265L3.5 4.06298L5.21967 5.78265C5.51256 6.07554 5.98744 6.07554 6.28033 5.78265C6.57322 5.48976 6.57322 5.01488 6.28033 4.72199L4.56066 3.00232L6.28033 1.28265C6.57322 0.989757 6.57322 0.514883 6.28033 0.22199C5.98744 -0.0709041 5.51256 -0.0709041 5.21967 0.22199L3.5 1.94166L1.78033 0.22199Z"
-                      fill="#0F172A" />
-                    <path
-                      d="M1.78033 0.22199C1.48744 -0.0709041 1.01256 -0.0709041 0.71967 0.22199C0.426777 0.514883 0.426777 0.989757 0.71967 1.28265L2.43934 3.00232L0.71967 4.72199C0.426777 5.01488 0.426777 5.48976 0.71967 5.78265C1.01256 6.07554 1.48744 6.07554 1.78033 5.78265L3.5 4.06298L5.21967 5.78265C5.51256 6.07554 5.98744 6.07554 6.28033 5.78265C6.57322 5.48976 6.57322 5.01488 6.28033 4.72199L4.56066 3.00232L6.28033 1.28265C6.57322 0.989757 6.57322 0.514883 6.28033 0.22199C5.98744 -0.0709041 5.51256 -0.0709041 5.21967 0.22199L3.5 1.94166L1.78033 0.22199Z"
-                      fill="#0F172A" />
+                <div class=" ">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                   </svg>
+
                 </div>
 
               </div>
@@ -298,8 +294,6 @@ const stateform=reactive({
 
 //SEND DETAIL CARRITO
    const sendToWhatsApp=()=> {
-
-
 
       let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre} ${stateform.apellido}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n`;
       cartST.items.forEach(item => {
