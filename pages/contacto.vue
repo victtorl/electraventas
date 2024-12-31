@@ -23,41 +23,41 @@
       </div>
       <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-20">
         <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-          <div>
-            <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nombres</label>
+          <div class="sm:col-span-2">
+            <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nombre Completo</label>
             <div class="mt-2.5">
-              <input type="text" name="first-name" id="first-name" required autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+              <input type="text" name="first-name" v-model="state.nombre" id="first-name" required autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
             </div>
+            <div class="c-message-error text-xs   text-red-600 "
+                  v-for="error of v$.nombre.$errors" :key="error.$uid">
+                  <span>{{ error.$message }}</span>
+              </div>
           </div>
-          <div>
-            <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Apellidos</label>
-            <div class="mt-2.5">
-              <input type="text" name="last-name" id="last-name" required autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
-            </div>
-          </div>
-          <!-- <div class="sm:col-span-2">
-            <label for="company" class="block text-sm/6 font-semibold text-gray-900">Company</label>
-            <div class="mt-2.5">
-              <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
-            </div>
-          </div> -->
+
           <div class="sm:col-span-2">
             <label for="email" class="block text-sm/6 font-semibold text-gray-900">Correo</label>
             <div class="mt-2.5">
-              <input type="email" name="email" id="email" required autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+              <input type="email" name="email" v-model="state.correo" id="email" required autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+            </div>
+            <div class="c-message-error text-xs   text-red-600 "
+                  v-for="error of v$.correo.$errors" :key="error.$uid">
+                  <span>{{ error.$message }}</span>
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="phone-number" class="block text-sm/6 font-semibold text-gray-900">Teléfono</label>
-            <div class="relative mt-2.5">
-      
-              <input type="tel" name="phone-number" id="phone-number" required autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo  sm:text-sm/6" />
+            <div class="relative mt-2.5"> 
+              <input type="tel" name="phone-number" v-model="state.numerotelefono" id="phone-number" required autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo  sm:text-sm/6" />
+            </div>
+            <div class="c-message-error text-xs   text-red-600 "
+                  v-for="error of v$.numerotelefono.$errors" :key="error.$uid">
+                  <span>{{ error.$message }}</span>
             </div>
           </div>
           <div class="sm:col-span-2">
             <label for="message" class="block text-sm/6 font-semibold text-gray-900">Mensaje(opcional)</label>
             <div class="mt-2.5">
-              <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+              <textarea name="message" id="message" v-model="messageta" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
             </div>
           </div>
           <!-- <SwitchGroup as="div" class="flex gap-x-4 sm:col-span-2">
@@ -76,8 +76,8 @@
         </div>
         <div class="mt-10 w-full flex justify-center ">
           <!-- <button type="submit" class="block w-full rounded-md bg-main-black px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-elecktraamarillo">Enviar</button> -->
-          <button type=submit class="home-two-btn-bgblack py-2.5 px-4 w-fit group bg-elecktraamarillo border-none   cursor-pointer">
-          <span class="relative z-10 text-base  font-semibold text-elecktranegro transition-all duration-300 group-hover:text-white  font-inter">
+          <button @click="enviarFormulario" type=submit class="home-two-btn-bgblack py-2.5 px-4 w-full group bg-elecktraamarillo border-none   cursor-pointer">
+          <span  class="relative z-10 text-base  font-semibold text-elecktranegro transition-all duration-300 group-hover:text-white  font-inter">
               Enviar
           </span>
           </button>
@@ -86,10 +86,104 @@
     </div>
   </template>
   
-  <script setup>
+  <script setup="ts">
   import { ref } from 'vue'
   import { ChevronDownIcon } from '@heroicons/vue/20/solid'
   import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
+  import { helpers, required, email } from '@vuelidate/validators'
+  import useVuelidate from '@vuelidate/core'
   
   const agreed = ref(false)
+
+
+
+  const state=reactive({
+    nombre:'',
+    correo:'',
+    numerotelefono:'',
+})
+
+  const messageta=ref('')
+
+
+const mustBeTrue = (value) => value == true
+
+
+
+const rules = computed(() => {
+    return {
+        nombre: {
+            required: helpers.withMessage('Este campo es requerido', required),
+            // $autoDirty: true ,
+        },
+
+        correo: {
+            required: helpers.withMessage('Ingrese un correo', required),
+            email: helpers.withMessage('Ingrese un correo válido', email),
+            // $autoDirty: true ,
+        },
+        numerotelefono: {
+            required: helpers.withMessage('Ingrese un número de telefono', required),
+            // minLength: helpers.withMessage('La contraseña debe tener mínimo 8 caracteres', minLength(8)),
+            // $autoDirty: true ,
+        },
+    }
+})
+
+const v$ = useVuelidate(rules, state);
+
+
+  const enviarFormulario=(e) => {
+    //si todo march bien
+    console.log(v$)
+    v$.value.$touch();
+    if (!v$.value.$error) {
+        peticionAppScriptForm()
+        e.preventDefault()
+       state.nombre=""
+       state.correo=""
+       state.numerotelefono=""
+       messageta.value=''
+       v$.value.$reset()
+       useNuxtApp().$toast.success("Se han registado tus datos con éxito")
+       console.log('registrado con exito');
+       
+
+    }else{
+        e.preventDefault();
+        console.log('Errores');
+        useNuxtApp().$toast.error("Complete los campos necesarios")
+    }
+
+}
+  //en la configuración de google debe ser el autor con los datos con los que se ejecute y cualquier usuario not need
+  function peticionAppScriptForm() {
+    var url = "https://script.google.com/macros/s/AKfycbwDohB_YWN_X2ljZA2YFLf3T8v6Nae0S1WOdBBGWh9SChcrp7xCjZpkaaXwUeKg8I8K/exec";
+                
+    fetch(url, {
+        mode: "no-cors",
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name:state.nombre,
+            email:state.correo,
+            phone: state.numerotelefono,
+            msjta:messageta.value,
+            word:'label_any_tec'
+        })
+    })
+        .then(function (res) {
+            console.log(res);
+            return res
+        })
+        .then(function (res) {
+            console.log(res.text());
+        })
+        .catch(function (error) {
+            console.log('Request failure: ', error);
+        });
+}
+
   </script>
