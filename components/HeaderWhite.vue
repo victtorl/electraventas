@@ -48,7 +48,7 @@
                     class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Marcas
                 </NuxtLink>
-                <NuxtLink  to="/ofertas"
+                <NuxtLink  to="/ofertas" v-if="isActiveOffer()"
                     class="text-base lg:text-lg  font-semibold leading-6 text-elecktranegro hover:underline   cursor-pointer">
                     Ofertas
                 </NuxtLink>

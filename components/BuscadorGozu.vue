@@ -43,11 +43,6 @@
   
   <script setup>
   import { ref, onMounted } from 'vue';
-import { getAllProducts } from '~/firebase';
-
-  onMounted(() => {
-    getAllProducts()
-  })
 
   const prodST=useProductStore()
   

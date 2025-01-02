@@ -1,9 +1,11 @@
 <template>
 
-  <div class="border-2 border-elecktranegro/20  flex flex-col" >  
+  <div v-if="ofertaCaduca(props.oferta)" class="border-2 border-elecktranegro/20  flex flex-col" >  
       <a
         class="font-medium text-lg leading-5 text-center hover:text-black transition duration-500 pt-2 ease-in-out inline-bloc ">
         {{ props.marca }}
+        {{ props.oferta }}
+        
       </a>
       <div class="relative"><a href="#">
           <img class="w-full h-36 sm:h-44     px-6 pt-6 mt-6 z-100"
@@ -318,6 +320,15 @@ const llenarDetalleProducto = (idprod) => {
   const prodST = useProductStore()
   const aux = prodST.groupProducts.filter(u => u.id == idprod)
   detailST.llenarDatos(aux[0])
+
+}
+
+const ofertaCaduca=(isofert) => {
+   if(isofert){
+     return isActiveOffer() 
+   }else{
+    return true
+   }
 
 }
 

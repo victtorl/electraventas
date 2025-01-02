@@ -152,6 +152,7 @@
               <span class="transition-all duration-300">
                 {{ contact.email }} 
               </span>
+             
             </div>
             <h1 class="mt-6 font-semibold text-white text-18">Telefono</h1>
             <div class="flex gap-2 items-center relative group font-medium text-white/50 hover:text-white  transition-all duration-300 mt-3.5">

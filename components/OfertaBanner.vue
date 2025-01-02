@@ -1,11 +1,11 @@
 <template>
-    <div  v-if="diferenciaMilisegundosDesdeHoy(caducafecha)>0" class="w-full flex pt-8 justify-center bg-white text-elecktranegro">
+    <div  v-if="isActiveOffer()" class="w-full flex pt-8 justify-center bg-white text-elecktranegro">
         <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col  lg:flex-row text-center items-center">
             <p v-motion-pop-visible class="text-3xl font-bold font-manrope lg:w-[500px] text-start  "  >Revisa nuestras ofertas</p>
             <div class="w-full bordet-t-2 border-2 border-elecktraamarillo" ></div>
         </div>
     </div>
-    <div  v-if="diferenciaMilisegundosDesdeHoy(caducafecha)>0" class="w-full flex py-8 justify-center bg-white text-black">
+    <div  v-if="isActiveOffer()" class="w-full flex py-8 justify-center bg-white text-black">
         <div class="w-full px-auto px-6 lg:px-16 font-manrope 3xl:w-maxdesk 3xl:px-0 flex flex-col lg:flex-row  items-center">
             <!-- start oferta -->
             <div  class="flex lg:flex-col items-center gap-x-4  my-4 lg:my-0  sm:w-64" >
@@ -89,11 +89,6 @@ const caducafecha = computed(() => {
     }
 })
 
-
-
-
-
-
 function diferenciaMilisegundosDesdeHoy(fecha) {
     // Convertir la fecha proporcionada a una instancia de Date
     const fechaProporcionada = new Date(fecha);
@@ -104,6 +99,7 @@ function diferenciaMilisegundosDesdeHoy(fecha) {
 
     // Si la diferencia es menor a 0, retorna 0
     return Math.max(diferencia+21600000, 0);  ///se le agrega 2160...que son las 6 horas de diferencia pero en milisegundos
+
 }
 
 </script>

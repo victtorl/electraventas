@@ -31,5 +31,15 @@
 }
 
 
+function isActiveOffer(){
+    const infopST=useProductStore()
+    if(infopST.infopage.contacto?.fechaloferta){
+    const fechaProporcionada = new Date(infopST.infopage.contacto?.fechaloferta);
+    const fechaActual = new Date();
+    const diferencia = fechaProporcionada+21600000 - fechaActual;  // dif en milisegundos
+    diferencia>0?true:false
+     }
+}
 
-export {goTo,goToM,goToInicio,getPosition}
+
+export {goTo,goToM,goToInicio,getPosition,isActiveOffer}
