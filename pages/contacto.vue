@@ -174,7 +174,9 @@ const v$ = useVuelidate(rules, state);
 }
   //en la configuración de google debe ser el autor con los datos con los que se ejecute y cualquier usuario not need
   function peticionAppScriptForm() {
-    var url = "https://script.google.com/macros/s/AKfycbwAXFY1iIT4e_v_aYdyMwikICjdhVDz9xgvgHkCz9ABczMng5UtCTcWqwX3iparBCTT/exec";
+    var url = "https://script.google.com/macros/s/AKfycbxySp3SCiXUwkK2rKHevi2fCua8vH3BgrIE7NN1422jVvy5ENnnPWvXXr0hdy7xG-mS/exec";
+    
+    
                 
     fetch(url, {
         mode: "no-cors",
