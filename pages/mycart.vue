@@ -196,23 +196,23 @@
 
                 <form action="#" method="POST" class="mx-auto  max-w-xl ">
                   <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                    <div>
-                      <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nombres</label>
+                    <div class="sm:col-span-2">
+                      <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">Nombre Completo</label>
                       <div class="mt-2.5">
                         <input type="text" name="first-name" id="first-name" autocomplete="given-name" required v-model="stateform.nombre"
                           :class="{ 'border-red-500 border-2': v$.nombre.$errors.length }"
                           class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6"/>
                         </div>
                     </div>
-                    <div>
-                      <label for="last-name" class="block text-sm/6 font-semibold text-gray-900">Apellidos</label>
+                    <div class="sm:col-span-2">
+                      <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">RUC o DNI</label>
                       <div class="mt-2.5">
-                        <input type="text" name="last-name" id="last-name" autocomplete="family-name" required v-model="stateform.apellido"
-                        :class="{ 'border-red-500 border-2': v$.apellido.$errors.length }"
-                          class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+                        <input type="number" name="first-name" id="first-name" autocomplete="given-name" required v-model="stateform.rucdni"
+                          :class="{ 'border-red-500 border-2': v$.rucdni.$errors.length }"
+                          class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset no-spinners  ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6"/>
                         </div>
                     </div>
- 
+
                     <div class="sm:col-span-2">
                       <label for="email" class="block text-sm/6 font-semibold text-gray-900">Correo</label>
                       <div class="mt-2.5">
@@ -260,7 +260,7 @@
 import { FwbButton, FwbModal } from 'flowbite-vue'
 import html2pdf from 'html2pdf.js'
 import { useVuelidate } from '@vuelidate/core'
-import { required,helpers,email } from '@vuelidate/validators'
+import { required,helpers,email,minLength } from '@vuelidate/validators'
 
 const cartST=useCartStore()
 
@@ -292,7 +292,7 @@ function abrirModal() {
 
 const stateform=reactive({
   nombre:'',
-  apellido:'',
+  rucdni:'',
   email:'',
   telefono:''
 })
@@ -303,8 +303,9 @@ const rules = computed(() => {
             required: helpers.withMessage('Este campo es requerido', required),
             // $autoDirty: true ,
         },
-        apellido: {
+        rucdni: {
             required: helpers.withMessage('Este campo es requerido', required),
+             minLength: helpers.withMessage(' debe tener mínimo 8 caracteres', minLength(8)),
             // $autoDirty: true ,
         },
         email: {
@@ -327,14 +328,14 @@ const v$ = useVuelidate(rules, stateform);
     v$.value.$touch();
     if (!v$.value.$error) {
     const cartST=useCartStore()
-      let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre} ${stateform.apellido}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n`;
+      let message = `🛒 *Detalle del Carrito de Compras:*\n *Nombre: ${stateform.nombre}* \n *RUC: ${stateform.rucdni}* \n *Correo: ${stateform.email}*\n *Mobil: ${stateform.telefono}*\n \n`;
       cartST.items.forEach(item => {
         message += `${item.nombre} || ${item.codigo} ||  X${item.quantity}\n`;
       });
       message += `\n*Total productos: ${cartST.totalItems}*`;
 
       const encodedMessage = encodeURIComponent(message);
-      const phoneNumber = "+51941103001"; // Número con código de país  //
+      const phoneNumber = "+51941103001"; // Número con código de país  // 
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
       cartST.clearCart()
@@ -345,3 +346,16 @@ const v$ = useVuelidate(rules, stateform);
 
 
 </script>
+
+
+<style>
+ .no-spinners {
+         -moz-appearance: textfield;
+      }
+      
+      .no-spinners::-webkit-outer-spin-button,
+      .no-spinners::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+</style>
