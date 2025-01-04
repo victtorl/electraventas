@@ -1,6 +1,6 @@
 <template>
-
-    <div class="pt-12 sm:pt-16  lg:pt-44 px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 py-10" >
+  <div class="w-full flex justify-center items-center" >
+    <div class="pt-12 sm:pt-16   lg:pt-44 px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 py-10" >
 
 
 
@@ -12,6 +12,7 @@
         </h2>
 
         <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-5  xl:gap-x-8">
+          
       <li v-for="file in images" :key="file.source" class="relative  p-2">
         <span @click="filterProdsbyMarc(file.name)" >
         <div  class="group overflow-hidden rounded-lg bg-gray-100 focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
@@ -26,7 +27,7 @@
     </ul>
 
     </div>
-
+  </div>  
   </template>
   
   <script setup>

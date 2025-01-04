@@ -64,7 +64,7 @@
             </ul>
         </div>
 
-        <div class="grid  grid-cols-1 xs:grid-cols-2    md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4  ">
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3  md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5  gap-4  ">
             <!-- CARD 3 -->
             <div v-for="item in proST.groupProducts.filter(u=>u.data.categoria==toolST.selectvariant)"
                 class="rounded overflow-hidden shadow-lg bg-white flex flex-col   ">
