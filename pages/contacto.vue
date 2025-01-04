@@ -33,6 +33,16 @@
                   <span>{{ error.$message }}</span>
               </div>
           </div>
+          <div class="sm:col-span-2">
+            <label for="first-name" class="block text-sm/6 font-semibold text-gray-900">RUC O DNI</label>
+            <div class="mt-2.5">
+              <input type="number" inputmode="numeric" name="first-name" v-model="state.rucdni" id="first-name" required autocomplete="given-name" class="block w-full no-spinners rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-elecktraamarillo sm:text-sm/6" />
+            </div>
+            <div class="c-message-error text-xs   text-red-600 "
+                  v-for="error of v$.rucdni.$errors" :key="error.$uid">
+                  <span>{{ error.$message }}</span>
+              </div>
+          </div>
 
           <div class="sm:col-span-2">
             <label for="email" class="block text-sm/6 font-semibold text-gray-900">Correo</label>
@@ -90,7 +100,7 @@
   import { ref } from 'vue'
   import { ChevronDownIcon } from '@heroicons/vue/20/solid'
   import { Switch, SwitchGroup, SwitchLabel } from '@headlessui/vue'
-  import { helpers, required, email } from '@vuelidate/validators'
+  import { helpers, required, email,minLength } from '@vuelidate/validators'
   import useVuelidate from '@vuelidate/core'
   
   const agreed = ref(false)
@@ -99,6 +109,7 @@
 
   const state=reactive({
     nombre:'',
+    rucdni:'',
     correo:'',
     numerotelefono:'',
 })
@@ -116,6 +127,11 @@ const rules = computed(() => {
             required: helpers.withMessage('Este campo es requerido', required),
             // $autoDirty: true ,
         },
+        rucdni: {
+            required: helpers.withMessage('Este campo es requerido', required),
+             minLength: helpers.withMessage(' debe tener mínimo 8 caracteres', minLength(8)),
+            // $autoDirty: true ,
+        },
 
         correo: {
             required: helpers.withMessage('Ingrese un correo', required),
@@ -124,7 +140,6 @@ const rules = computed(() => {
         },
         numerotelefono: {
             required: helpers.withMessage('Ingrese un número de telefono', required),
-            // minLength: helpers.withMessage('La contraseña debe tener mínimo 8 caracteres', minLength(8)),
             // $autoDirty: true ,
         },
     }
@@ -141,6 +156,7 @@ const v$ = useVuelidate(rules, state);
         peticionAppScriptForm()
         e.preventDefault()
        state.nombre=""
+       state.rucdni=""
        state.correo=""
        state.numerotelefono=""
        messageta.value=''
@@ -158,7 +174,7 @@ const v$ = useVuelidate(rules, state);
 }
   //en la configuración de google debe ser el autor con los datos con los que se ejecute y cualquier usuario not need
   function peticionAppScriptForm() {
-    var url = "https://script.google.com/macros/s/AKfycbwDohB_YWN_X2ljZA2YFLf3T8v6Nae0S1WOdBBGWh9SChcrp7xCjZpkaaXwUeKg8I8K/exec";
+    var url = "https://script.google.com/macros/s/AKfycbwAXFY1iIT4e_v_aYdyMwikICjdhVDz9xgvgHkCz9ABczMng5UtCTcWqwX3iparBCTT/exec";
                 
     fetch(url, {
         mode: "no-cors",
@@ -168,6 +184,7 @@ const v$ = useVuelidate(rules, state);
         },
         body: JSON.stringify({
             name:state.nombre,
+            rucdni:state.rucdni,
             email:state.correo,
             phone: state.numerotelefono,
             msjta:messageta.value,
@@ -187,3 +204,17 @@ const v$ = useVuelidate(rules, state);
 }
 
   </script>
+
+
+
+<style>
+ .no-spinners {
+         -moz-appearance: textfield;
+      }
+      
+      .no-spinners::-webkit-outer-spin-button,
+      .no-spinners::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+</style>
