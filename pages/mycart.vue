@@ -334,7 +334,7 @@ const v$ = useVuelidate(rules, stateform);
       message += `\n*Total productos: ${cartST.totalItems}*`;
 
       const encodedMessage = encodeURIComponent(message);
-      const phoneNumber = "+51982043391"; // Número con código de país
+      const phoneNumber = "+51941103001"; // Número con código de país  //
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
       cartST.clearCart()

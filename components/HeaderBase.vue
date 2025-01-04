@@ -88,9 +88,9 @@
                         class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
                         Marcas
                     </NuxtLink>
-                    <NuxtLink to="/ofertas" v-if="isActiveOffer()"
+                    <NuxtLink to="/ofertas"  v-if="isActiveOffer()"
                         class="text-base lg:text-lg  font-semibold leading-6 text-white hover:underline   cursor-pointer">
-                        Ofertas
+                        Ofertas 
                     </NuxtLink>
 
                     <!-- <NuxtLink to="/contacto" >
@@ -344,5 +344,9 @@ const setSelectCateroriaM=(u)=>{
     toolST.setselectvariant(u)
     mobileMenuOpen.value=false
 }
+
+const ofertaActiva=computed(() => {
+  return  isActiveOffer()
+})
   
   </script>

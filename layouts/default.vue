@@ -114,7 +114,7 @@ const initialize = () => {
 onMounted(() => initialize());
 
 const gowsp=() => {
-  window.open("https://api.whatsapp.com/send?phone=51953140527&text=Hola%20quisera%20mas%20informacion%20sobre%20sus%productos")
+  window.open("https://api.whatsapp.com/send?phone=51941103001&text=Hola%20quisera%20mas%20información%20sobre%20sus%20productos")
 }
 
 </script>

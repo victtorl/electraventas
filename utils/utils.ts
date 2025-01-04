@@ -36,8 +36,12 @@ function isActiveOffer(){
     if(infopST.infopage.contacto?.fechaloferta){
     const fechaProporcionada = new Date(infopST.infopage.contacto?.fechaloferta);
     const fechaActual = new Date();
-    const diferencia = fechaProporcionada+21600000 - fechaActual;  // dif en milisegundos
-    diferencia>0?true:false
+    const diferencia = fechaProporcionada - fechaActual;  // dif en milisegundos
+    if(diferencia+18000000>=0){
+        return true
+    }else{
+        return false
+    }
      }
 }
 

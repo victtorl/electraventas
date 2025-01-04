@@ -169,9 +169,9 @@
               </div>
             </div>
             <div data-aos="fade-left" class="w-full">
-              <div class="px-5 py-4 md:px-[74px] md:py-[67px] rounded-[20px] border border-[#231b2f] bg-elektraplomo">
+              <div class="px-5 py-4 md:px-[20px] md:py-[67px] rounded-[20px] border border-[#231b2f] bg-black">
                 <img
-                  src="/assets/imgs/confianza.jpg"
+                  src="/assets/imgs/tec_valores.png"
                   alt=""
                   class="w-full rounded-md"
                 />
