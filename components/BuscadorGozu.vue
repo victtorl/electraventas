@@ -46,7 +46,7 @@
 
   const prodST=useProductStore()
   
-  const data = ref(prodST.groupProducts)
+  const data = ref(prodST.groupProductsSearch)
 
   const searchQuery = ref('');
   const filteredResults = ref([]);
@@ -56,12 +56,10 @@
 
   const filteredItems = computed(() => {
   if(searchQuery.value == ''){
-    return prodST.groupProducts.slice(0,2)
+    return prodST.groupProductsSearch.slice(0,2)
   }else{
-    console.log(prodST.groupProducts.filter((item) =>item.data.nombre.toLowerCase().includes(searchQuery.value.toLowerCase())));
-    
-    return data.value.filter((item) =>
-    item.data.nombre.toLowerCase().includes(searchQuery.value.toLowerCase()))
+    // console.log(prodST.groupProductsSearch.filter((item) =>item.data.nombre.toLowerCase().includes(searchQuery.value.toLowerCase())));
+    return prodST.groupProductsSearch.filter((item) =>item.data.nombre.toLowerCase().includes(searchQuery.value.toLowerCase()))
   }
 });
   
@@ -71,7 +69,7 @@
     const detailST=useDetailProduct()
     router.push({ path: `/productos/${result.id}` })
     const prodST = useProductStore()
-    const aux = prodST.groupProducts.filter(u => u.id == result.id)
+    const aux = prodST.groupProductsSearch.filter(u => u.id == result.id)
     detailST.llenarDatos(aux[0])
 
     // searchQuery.value = result;

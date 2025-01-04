@@ -23,7 +23,7 @@
 <script setup lang="ts" >
 
 import { useWindowScroll } from "@vueuse/core";
-import { getAllContentHome } from "~/firebase";
+import { getAllContentHome, getAllProductsFind } from "~/firebase";
 
 const { width, height } = useWindowSize();
 const { x, y } = useWindowScroll({ behavior: "smooth" });
@@ -111,7 +111,12 @@ const loadervisible=ref(true)
 const initialize = () => {
   loadervisible.value=false
 };
-onMounted(() => initialize());
+onMounted(() => 
+{
+  initialize()
+  getAllProductsFind()
+}
+);
 
 const gowsp=() => {
   window.open("https://api.whatsapp.com/send?phone=51941103001&text=Hola%20quisera%20mas%20información%20sobre%20sus%20productos")

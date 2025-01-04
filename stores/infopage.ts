@@ -68,14 +68,23 @@ export const useProductStore=defineStore("products-store",() => {
 
 
   const groupProducts = ref([] as Array<{}|any|IProduct>);
-
   function llenarProductos(itm:IProduct){
       groupProducts.value = groupProducts.value.concat(itm)
   }
-
   function limpiarProductos(){
       groupProducts.value=[]
   }
+
+ 
+  const groupProductsSearch = ref([] as Array<{}|any|IProduct>);
+  function llenarProductosSearch(itm:IProduct){
+      groupProductsSearch.value = groupProductsSearch.value.concat(itm)
+  }
+  function limpiarProductosSearch(){
+      groupProductsSearch.value=[]
+  }
+
+
 
 
 
@@ -172,6 +181,10 @@ function limpiarInfopage(){
         groupProducts,
         llenarProductos,
         limpiarProductos,
+
+        groupProductsSearch,
+        llenarProductosSearch,
+        limpiarProductosSearch,
 
         groupOfertas,
         llenarOfertas,
