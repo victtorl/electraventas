@@ -40,8 +40,8 @@
         <div class="hidden lg:block" >
             <ul role="list" class="divide-y divide-gray-100">
                 <li v-for="item,i in options" :key="item.value" 
-                :class="`${i+1==toolST.selectvariant?'bg-elecktraamarillo':''}`"
-                @click="setSelectCategoria(i+1)"
+                :class="`${i==toolST.selectvariant?'bg-elecktraamarillo':''}`"
+                @click="setSelectCategoria(i)"
                 class="relative py-5 w-full md:w-64 hover:bg-elecktraamarillo">
                     <div class="px-4 sm:px-6 lg:px-8">
                         <div class="mx-auto flex max-w-4xl justify-between gap-x-6">
@@ -159,19 +159,35 @@ const people = [
     },
 ]
 
+// const options = ref([
+//       { text: 'Herramientas para terminales y cables', value: 1 },
+//       { text: 'Mangas termocontraibles ', value: 2 },
+//       { text: 'Terminales de compresión', value: 3 },
+//       { text: 'Terminales sobremoldeados', value: 3 },
+//       { text: 'Cintillos y Espirales', value: 4 },
+//       { text: 'Enchufes y Tomas Industriales', value: 5 },
+//       { text: 'Térmicos', value: 6 },
+//       { text: 'Productos Rittal', value: 7 },
+//       { text: 'Phoenix Contact', value: 8 },
+//       { text: 'Canaletas y Riel Din ranuradas', value: 9 },
+//       { text: 'Cables', value: 10 },
+//       { text: 'Otros', value: 11 },
+// ])
+
 const options = ref([
-      { text: 'Herramientas para terminales y cables', value: 1 },
-      { text: 'Mangas termocontraibles ', value: 2 },
-      { text: 'Terminales de compresión', value: 3 },
-      { text: 'Terminales sobremoldeados', value: 3 },
-      { text: 'Cintillos y Espirales', value: 4 },
-      { text: 'Enchufes y Tomas Industriales', value: 5 },
-      { text: 'Térmicos', value: 6 },
-      { text: 'Productos Rittal', value: 7 },
-      { text: 'Phoenix Contact', value: 8 },
-      { text: 'Canaletas y Riel Din ranuradas', value: 9 },
-      { text: 'Cables', value: 10 },
-      { text: 'Otros', value: 11 },
+  { text: 'Otros', value: 0 },
+  { text: 'Herramientas para terminales y cables', value: 1 },
+  { text: 'Mangas termocontraibles ', value: 2 },
+  { text: 'Terminales de compresión', value: 3 },
+  { text: 'Terminales sobremoldeados', value: 4 },
+  { text: 'Cintillos y Espirales', value: 5 },
+  { text: 'Enchufes y Tomas Industriales', value: 6 },
+  { text: 'Térmicos', value: 7 },
+  { text: 'Productos Rittal', value: 8 },
+  { text: 'Phoenix Contact', value: 9 },
+  { text: 'Canaletas y Riel Din ranuradas', value: 10 },
+  { text: 'Cables', value: 11 },
+  
 ])
 
 
