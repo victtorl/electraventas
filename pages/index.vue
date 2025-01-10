@@ -5,11 +5,31 @@
                <!-- Hero section -->
       <div class="relative isolate overflow-hidden h-[100vh] bg-blackgio pt-16 lg:pt-0 flex justify-center">
         <div class="absolute inset-0 -z-10 h-full w-full object-cover brightness-50  zoom-img">
-          <video-background 
+          <!-- <video-background 
               :src="gatobaila"
               style="max-height:100%; height: 100%;"
           >
-            </video-background>
+            </video-background> -->
+
+         
+            <client-only>
+          <vue-plyr>
+            <div class="video-container"  >
+              <iframe
+                style="position: absolute; top: 0; left: 0; right: 0; width: 100%;object-fit: cover; height: 100%; border: none; padding: 0;"
+                :src="`http://www.youtube.com/embed/${idyt}?playlist=${idyt}&loop=1&autoplay=1&mute=1&amp;controls=0&`"
+                allowfullscreen
+                allowtransparency
+                frameborder="0"
+                loop
+                allow="autoplay"
+              ></iframe>
+          </div>
+          </vue-plyr>
+        </client-only>
+
+
+
         </div>
        
         <div class="px-auto px-6 lg:px-16 w-full font-manrope 3xl:w-maxdesk 3xl:px-0 absolute bottom-[25%]  3xl:bg-invisible">
@@ -18,7 +38,7 @@
             <div class="text-left ">
               <p 
                 class="text-sm  sm:text-base lg:text-2xl xl:text-2xl xl:leading-8 xl:max-w-2xl font-medium text-white ">
-                Que hacemos? 
+                Que hacemos?
               </p>
             </div>
           </div>
@@ -92,7 +112,6 @@
 
       <Propuesta/>
       <OfertaBanner/>
-
       <QuienesSomos/>
 
       <Clientes/>
@@ -105,9 +124,28 @@
 const mainbanner=ref(false)
 import gatobaila from "~/assets/videos/corporativo.mp4"
 
+const infoST=useProductStore()
+
 useHead({
   title: "tradingelectric"
 })
+
+const idyt=computed(() => {
+  if(infoST.infopage.contacto?.urlyoutube){
+    return getIdFromYoutubeURL(infoST.infopage.contacto?.urlyoutube)
+  }
+})
+
+var getIdFromYoutubeURL = function (url) {
+  var regExp =
+    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+  var match = url.match(regExp);
+  if (match && match[7].length == 11) {
+    return match[7];
+  } else {
+    return null;
+  }
+};
 
 </script>
 
@@ -116,6 +154,35 @@ useHead({
 .billoconfig{
   background: rgb(0,0,0);
   background: linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(57,57,51,1) 90%);
+}
+
+
+
+
+
+
+  @media (width <= 550px) { 
+  
+    .video-container {
+
+    }
+   }
+  @media (width >= 1200px) { 
+      .video-container {
+          position:relative;
+          padding-bottom:56.25%;
+          padding-top:30px;
+          height:0;
+          overflow:hidden;
+      }
+   }
+
+.video-container iframe, .video-container object, .video-container embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
 }
 
 </style>
