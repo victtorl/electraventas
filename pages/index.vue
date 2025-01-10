@@ -17,7 +17,7 @@
             <div class="video-container"  >
               <iframe
                 style="position: absolute; top: 0; left: 0; right: 0; width: 100%;object-fit: cover; height: 100%; border: none; padding: 0;"
-                :src="`http://www.youtube.com/embed/${idyt}?playlist=${idyt}&loop=1&autoplay=1&mute=1&amp;controls=0&`"
+                :src="`https://www.youtube.com/embed/${idyt}?playlist=${idyt}&loop=1&autoplay=1&mute=1&amp;controls=0&`"
                 allowfullscreen
                 allowtransparency
                 frameborder="0"
